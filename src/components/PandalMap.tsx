@@ -17,7 +17,7 @@ const PandalMap = () => {
     <MapContainer
       center={[22.5386, 88.3462]}
       zoom={12.65}
-      style={{ height: 'calc(100vh - 90px)', width: '100%' }}
+      style={{ height: 'calc(100vh - 80px)', width: '100%' }}
     >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
