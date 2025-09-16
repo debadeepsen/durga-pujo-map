@@ -1,12 +1,13 @@
 'use client'
 
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
-import type { GeoJSON as GeoJSONType } from 'geojson'
+import type { Feature, GeoJSON as GeoJSONType, Geometry } from 'geojson'
 import 'leaflet/dist/leaflet.css'
 import pandals from '@/data/puja_pandals'
+import { Layer } from 'leaflet'
 
 const PandalMap = () => {
-  const onEachFeature = (feature: any, layer: any) => {
+  const onEachFeature = (feature: Feature<Geometry, any>, layer: Layer) => {
     if (feature.properties?.name) {
       layer.bindPopup(`<b>${feature.properties.name}</b>`)
     }
