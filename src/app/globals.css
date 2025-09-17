@@ -33,6 +33,10 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .leaflet-marker-icon {
   border: 0 !important;
 }

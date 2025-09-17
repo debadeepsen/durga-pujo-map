@@ -1,4 +1,6 @@
-export default {
+import type { GeoJSON } from 'geojson'
+
+export const pandals: GeoJSON = {
   type: 'FeatureCollection',
   features: [
     {

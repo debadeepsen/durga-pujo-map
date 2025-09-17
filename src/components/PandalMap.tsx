@@ -3,7 +3,7 @@
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
 import type { Feature, GeoJSON as GeoJSONType, Geometry } from 'geojson'
 import 'leaflet/dist/leaflet.css'
-import pandals from '@/data/puja_pandals'
+import { pandals } from '@/data/puja_pandals'
 import { Layer } from 'leaflet'
 
 const PandalMap = () => {
@@ -23,7 +23,7 @@ const PandalMap = () => {
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OSM</a>"
       />
-      <GeoJSON data={pandals as GeoJSONType} onEachFeature={onEachFeature} />
+      <GeoJSON data={pandals} onEachFeature={onEachFeature} />
     </MapContainer>
   )
 }
