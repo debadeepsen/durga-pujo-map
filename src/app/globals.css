@@ -19,8 +19,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #232323;
-    --foreground: #dddd;
+    --background: var(--color-gray-800);
+    --foreground: var(--color-gray-200);
   }
 }
 
@@ -35,6 +35,14 @@ body {
 
 a {
   text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 .leaflet-marker-icon {
