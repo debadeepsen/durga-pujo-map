@@ -1,25 +1,6 @@
 import { NextResponse } from 'next/server'
 import { pandals } from '@/data/puja_pandals'
-
-type Feature = {
-  type: 'Feature'
-  geometry: {
-    type: 'Point'
-    coordinates: [number, number] // [lng, lat]
-  }
-  properties: {
-    name: string
-    styleUrl?: string
-    [key: string]: any
-  }
-}
-
-type ClassifiedPujas = {
-  'Banedi Bari': Feature[]
-  'North/Central Kolkata': Feature[]
-  'Salt Lake': Feature[]
-  'South Kolkata': Feature[]
-}
+import { Feature, ClassifiedPujas } from '@/types/types'
 
 export async function GET() {
   const features = (pandals as any).features as Feature[]

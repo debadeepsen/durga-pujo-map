@@ -1,13 +1,14 @@
 'use client'
 
-import { MapContainer, TileLayer, GeoJSON, ZoomControl } from 'react-leaflet'
-import type { Feature, GeoJSON as GeoJSONType, Geometry } from 'geojson'
+import { Feature, Geometry } from 'geojson'
+import { Layer } from 'leaflet'
+import PujaMap from './PujaMap'
 import 'leaflet/dist/leaflet.css'
 import { pandals } from '@/data/puja_pandals'
-import { Layer } from 'leaflet'
 import { useState } from 'react'
 import { Drawer } from './ui/Drawer'
 import { Icon } from '@iconify-icon/react'
+import PujaList from './PujaList'
 
 const PandalMap = () => {
   const [drawerOpen, setDrawerOpen] = useState(true)
@@ -29,22 +30,16 @@ const PandalMap = () => {
       </button>
       <div className='relative'>
         <Drawer open={drawerOpen} onClose={toggleDrawer} size='320px'>
-          Filters
+          <h2 className='text-xl font-semibold mb-2'>Puja List</h2>
+          <PujaList />
         </Drawer>
         <div className='relative z-1'>
-          <MapContainer
+          <PujaMap
             center={[22.5386, 88.3462]}
             zoom={12.65}
-            style={{ height: 'calc(100vh - 48px)', width: '100%' }}
-            zoomControl={false}
-          >
-            <TileLayer
-              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-              attribution="&copy; <a target='_blank' href='https://www.openstreetmap.org/copyright'>OSM</a>"
-            />
-            <GeoJSON data={pandals} onEachFeature={onEachFeature} />
-            <ZoomControl position='bottomright' />
-          </MapContainer>
+            pandals={pandals}
+            onEachFeature={onEachFeature}
+          />
         </div>
       </div>
     </div>
