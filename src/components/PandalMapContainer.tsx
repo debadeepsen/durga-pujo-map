@@ -51,7 +51,7 @@ const PandalMapContainer = () => {
   return (
     <div>
       <button 
-        className='absolute top-3 left-2 z-50 bg-white p-2 rounded-md shadow-md hover:bg-gray-100 transition-colors'
+        className='absolute top-1 left-2 z-50 p-2 rounded-md shadow-md hover:bg-gray-500/20 transition-colors'
         onClick={toggleDrawer}
         aria-label={drawerOpen ? 'Close menu' : 'Open menu'}
       >
