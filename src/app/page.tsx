@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic'
 
 // Dynamically load to avoid SSR issues
-const PandalMap = dynamic(() => import('@/components/PandalMap'), {
+const PandalMap = dynamic(() => import('@/components/PandalMapContainer'), {
   ssr: false
 })
 

@@ -4,6 +4,7 @@ import './globals.css'
 import 'leaflet/dist/leaflet.css'
 import { PageFooter } from '@/components/PageFooter'
 import { PageHeader } from '@/components/PageHeader'
+import ReduxProvider from '@/providers/ReduxProvider'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -27,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <ReduxProvider>
       <head>
         <link
           rel='stylesheet'
@@ -42,6 +44,7 @@ export default function RootLayout({
         {children}
         <PageFooter />
       </body>
+      </ReduxProvider>
     </html>
   )
 }
