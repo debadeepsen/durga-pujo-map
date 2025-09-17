@@ -48,3 +48,7 @@ button:hover {
 .leaflet-marker-icon {
   border: 0 !important;
 }
+
+.MuiCollapse-root {
+  margin-top: -1rem;
+}
