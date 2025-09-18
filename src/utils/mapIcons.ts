@@ -2,7 +2,7 @@ import L from 'leaflet';
 
 // Define icons for each category using SVG paths
 const CATEGORY_ICONS: Record<string, { path: string; viewBox: string; color: string }> = {
-  'Banedi Bari': {
+  'Aristocratic (Bonedi) Family Pujas': {
     path: 'M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z',
     viewBox: '0 0 24 24',
     color: '#0288d1' // Blue

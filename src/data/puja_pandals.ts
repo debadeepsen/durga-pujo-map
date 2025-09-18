@@ -4373,7 +4373,7 @@ export const pandals: GeoJSON = {
         coordinates: [88.3670376, 22.6034575, 0]
       },
       properties: {
-        name: 'Baghbazar Haldar Bari er Pujo',
+        name: 'Baghbazar Haldar Barir Pujo',
         description: {
           '@type': 'html',
           value:

@@ -6,7 +6,7 @@ export async function GET() {
   const features = (pandals as any).features as Feature[]
 
   const result: ClassifiedPujas = {
-    'Bonedi Bari Pujo': [],
+    'Aristocratic (Bonedi) Family Pujas': [],
     'North/Central Kolkata': [],
     'Salt Lake': [],
     'South Kolkata': []
@@ -17,7 +17,7 @@ export async function GET() {
 
     // 1. Banedi Bari category
     if (feature.properties?.['icon-color'] === '#0288d1') {
-      result['Bonedi Bari Pujo'].push(feature)
+      result['Aristocratic (Bonedi) Family Pujas'].push(feature)
       return
     }
 

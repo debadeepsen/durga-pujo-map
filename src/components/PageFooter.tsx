@@ -6,12 +6,12 @@ export const PageFooter = () => {
       Data collected from{' '}
       <a target='_blank' href='https://www.thepujo.com/pujo-map'>
         The Pujo Company
-        <Icon icon='lucide:external-link' />
+        <Icon icon='pajamas:external-link' />
       </a>{' '}
       and{' '}
       <a target='_blank' href='https://www.durgaonline.com/index.php/gmap'>
         Durga Online
-        <Icon icon='lucide:external-link' />
+        <Icon icon='pajamas:external-link' />
       </a>
       .
     </div>

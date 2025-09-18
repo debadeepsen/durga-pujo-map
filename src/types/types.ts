@@ -14,7 +14,7 @@ export type Feature = {
 }
 
 export type ClassifiedPujas = {
-  'Bonedi Bari Pujo': Feature[]
+  'Aristocratic (Bonedi) Family Pujas': Feature[]
   'North/Central Kolkata': Feature[]
   'Salt Lake': Feature[]
   'South Kolkata': Feature[]
