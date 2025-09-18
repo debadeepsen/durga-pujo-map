@@ -22,7 +22,7 @@ export async function GET() {
     }
 
     // 2. Rough classification based on lat/lng
-    if (lat >= 22.6 && lng < 88.42) {
+    if (lat >= 22.54 && lng < 88.42) {
       result['North/Central Kolkata'].push(feature)
     } else if (
       feature.properties?.name?.includes('Salt Lake') ||

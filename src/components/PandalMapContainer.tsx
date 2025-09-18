@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { Drawer } from './ui/Drawer'
 import { Icon } from '@iconify-icon/react'
 import PujaList from './PujaList'
-import { useAppDispatch } from '@/lib/hooks'
+import { useAppDispatch } from '@/hooks/hooks'
 import { selectPandal } from '@/features/map/mapSlice'
 
 const PandalMapContainer = () => {
@@ -59,7 +59,7 @@ const PandalMapContainer = () => {
       </button>
       <div className='relative'>
         <Drawer open={drawerOpen} onClose={toggleDrawer} size='320px'>
-          <h2 className='text-xl font-semibold mb-2'>Puja List</h2>
+          <h2 className='text-xl font-semibold -mt-2 mb-2'>Puja List</h2>
           <PujaList onSelect={handlePandalSelect} />
         </Drawer>
         <div className='relative z-1'>

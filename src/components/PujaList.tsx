@@ -11,6 +11,7 @@ import {
 import { ClassifiedPujas } from '@/types/types'
 import { Icon } from '@iconify-icon/react'
 import { endpoints } from '@/constants/constants'
+import GoogleMapLink from './GoogleMapLink'
 
 type PujaListProps = {
   onSelect?: (lat: number, lng: number, name: string) => void
@@ -64,20 +65,7 @@ const PujaList = ({ onSelect }: PujaListProps) => {
                       className='flex items-center gap-2 mb-2 w-full text-left'
                       onClick={() => onSelect?.(lat, lng, f.properties.name)}
                     >
-                      <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        title='Open in Google Maps'
-                        onClick={e => e.stopPropagation()} // prevent triggering recenter
-                      >
-                        <Icon
-                          icon='logos:google-maps'
-                          width={18}
-                          height={18}
-                          className='relative top-1'
-                        />
-                      </a>
+                      <GoogleMapLink lat={lat} lng={lng} />
                       <span className='text-sm text-gray-500 text-left'>
                         {f.properties.name}
                       </span>

@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, GeoJSON, ZoomControl, useMap, Popup } from 're
 import { Feature, Point } from 'geojson'
 import { Layer, LatLng, popup } from 'leaflet'
 import { useEffect, useRef } from 'react'
-import { useAppSelector, useAppDispatch } from '@/lib/hooks'
+import { useAppSelector, useAppDispatch } from '@/hooks/hooks'
 import { setViewport, selectPandal } from '@/features/map/mapSlice'
 
 interface PujaMapProps {
@@ -36,7 +36,7 @@ function MapController() {
         offset: [0, -20] // Move the popup up by 20 pixels
       })
         .setLatLng([lat, lng])
-        .setContent(`<div class="p-2"><strong>${name}</strong></div>`)
+        .setContent(`<div class="p-2 flex gap-2"><strong>${name}</strong></div>`)
         .openOn(map)
       
       // Center map on selected pandal
