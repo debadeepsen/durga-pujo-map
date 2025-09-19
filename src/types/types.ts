@@ -19,3 +19,15 @@ export type ClassifiedPujas = {
   'Salt Lake': Feature[]
   'South Kolkata': Feature[]
 }
+
+export type PandalInfo = {
+  location: {
+    latitude: number
+    longitude: number
+  }
+  details: {
+    name: string
+    description: string | { '@type': string; value: string }
+    category: string
+  }
+}
