@@ -5,10 +5,12 @@ import {
   TileLayer,
   GeoJSON,
   ZoomControl,
-  useMap
+  useMap,
+  Marker,
+  Popup
 } from 'react-leaflet'
 import { Feature, Point } from 'geojson'
-import { Layer, Marker, Popup, popup } from 'leaflet'
+import { Layer, popup } from 'leaflet'
 import { useEffect, useRef } from 'react'
 import { useAppSelector, useAppDispatch } from '@/hooks/hooks'
 import { setViewport } from '@/features/map/mapSlice'
@@ -34,21 +36,20 @@ const PujaMap = ({ pandals, onEachFeature }: PujaMapProps) => {
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution="&copy; <a target='_blank' href='https://www.openstreetmap.org/copyright'>OSM</a>"
       />
-      
+      {/* <Marker position={[22.469789, 88.391616]} /> */}
       {pandals.map((pandal, idx) => {
         const { latitude, longitude } = pandal.location
-        const { name, description, category } = pandal.details
+        const { name, category } = pandal.details
         const icons = (window as any).pujaIcons || {}
         const icon = icons[category] || icons['south']
 
-        return ('p'
-          // <Marker key={idx} position={[latitude, longitude]} icon={icon}>
-          //   <Popup>
-          //     <strong>{name}</strong>
-          //     <br />
-          //     {description}
-          //   </Popup>
-          // </Marker>
+        return (
+          <Marker key={idx} position={[latitude, longitude]} icon={icon}>
+            <Popup>
+              <strong>{name}</strong>
+              {/* <br /> */}
+            </Popup>
+          </Marker>
         )
       })}
       <ZoomControl position='bottomright' />
@@ -59,4 +60,6 @@ const PujaMap = ({ pandals, onEachFeature }: PujaMapProps) => {
 
 export default PujaMap
 
-{/* <GeoJSON data={pandals} onEachFeature={onEachFeature} /> */}
+{
+  /* <GeoJSON data={pandals} onEachFeature={onEachFeature} /> */
+}

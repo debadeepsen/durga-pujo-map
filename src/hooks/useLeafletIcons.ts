@@ -7,25 +7,25 @@ export const useLeafletIcons = () => {
   useEffect(() => {
     const icons: Record<string, L.Icon> = {
       north: L.icon({
-        iconUrl: '/icons/north.png',
+        iconUrl: '/icons/marker-icon-green.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
         popupAnchor: [0, -28]
       }),
       south: L.icon({
-        iconUrl: '/icons/south.png',
+        iconUrl: '/icons/marker-icon-red.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
         popupAnchor: [0, -28]
       }),
       salt_lake: L.icon({
-        iconUrl: '/icons/saltlake.png',
+        iconUrl: '/icons/marker-icon-orange.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
         popupAnchor: [0, -28]
       }),
       aristocratic: L.icon({
-        iconUrl: '/icons/bonedi.png',
+        iconUrl: '/icons/marker-icon-blue.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
         popupAnchor: [0, -28]
