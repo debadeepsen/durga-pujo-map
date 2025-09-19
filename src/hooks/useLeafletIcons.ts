@@ -6,25 +6,25 @@ import { useEffect } from 'react'
 export const useLeafletIcons = () => {
   const icons: Record<string, L.Icon> = {
     north: L.icon({
-      iconUrl: '/icons/marker-icon-green.png',
+      iconUrl: '/marker-icons/marker-icon-green.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [0, -28]
     }),
     south: L.icon({
-      iconUrl: '/icons/marker-icon-red.png',
+      iconUrl: '/marker-icons/marker-icon-red.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [0, -28]
     }),
     salt_lake: L.icon({
-      iconUrl: '/icons/marker-icon-orange.png',
+      iconUrl: '/marker-icons/marker-icon-orange.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [0, -28]
     }),
     aristocratic: L.icon({
-      iconUrl: '/icons/marker-icon-blue.png',
+      iconUrl: '/marker-icons/marker-icon-blue.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [0, -28]
