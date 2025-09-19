@@ -19,7 +19,7 @@ import { MapController } from './MapController'
 import { useLeafletIcons } from '@/hooks/useLeafletIcons'
 
 interface PujaMapProps {
-  pandals: PandalInfo[] 
+  pandals: PandalInfo[]
 }
 
 const PujaMap = ({ pandals }: PujaMapProps) => {
@@ -43,6 +43,8 @@ const PujaMap = ({ pandals }: PujaMapProps) => {
         const { name, category } = pandal.details
         // const icons = (window as any).pujaIcons || {}
         const icon = icons[category] || icons['south']
+
+        // if (name.toLowerCase().includes('rammohan')) console.log({ name, category, icon })
 
         return (
           <Marker key={idx} position={[latitude, longitude]} icon={icon}>
