@@ -20,19 +20,19 @@ const PandalMapContainer = () => {
     setDrawerOpen(!drawerOpen)
   }
 
-  const onEachFeature = (feature: Feature<Point>, layer: Layer) => {
-    if (feature.properties?.name) {
-      layer.bindPopup(`<strong>${feature.properties.name}</strong>`)
+  // const onEachFeature = (feature: Feature<Point>, layer: Layer) => {
+  //   if (feature.properties?.name) {
+  //     layer.bindPopup(`<strong>${feature.properties.name}</strong>`)
       
-      // Add click handler to select pandal
-      layer.on({
-        click: () => {
-          const [lng, lat] = feature.geometry.coordinates
-          dispatch(selectPandal(feature))
-        },
-      })
-    }
-  }
+  //     // Add click handler to select pandal
+  //     layer.on({
+  //       click: () => {
+  //         const [lng, lat] = feature.geometry.coordinates
+  //         dispatch(selectPandal(feature))
+  //       },
+  //     })
+  //   }
+  // }
 
   const handlePandalSelect = (lat: number, lng: number, name: string) => {
     // This will be triggered when a pandal is selected from the list
@@ -65,7 +65,6 @@ const PandalMapContainer = () => {
         <div className='relative z-1'>
           <PujaMap
             pandals={pandals}
-            onEachFeature={onEachFeature}
           />
         </div>
       </div>

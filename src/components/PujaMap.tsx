@@ -16,14 +16,15 @@ import { useAppSelector, useAppDispatch } from '@/hooks/hooks'
 import { setViewport } from '@/features/map/mapSlice'
 import { PandalInfo } from '@/types/types'
 import { MapController } from './MapController'
+import { useLeafletIcons } from '@/hooks/useLeafletIcons'
 
 interface PujaMapProps {
-  pandals: PandalInfo[] // You might want to replace 'any' with a proper type
-  onEachFeature: (feature: Feature<Point>, layer: Layer) => void
+  pandals: PandalInfo[] 
 }
 
-const PujaMap = ({ pandals, onEachFeature }: PujaMapProps) => {
+const PujaMap = ({ pandals }: PujaMapProps) => {
   const { center, zoom } = useAppSelector(state => state.map)
+  const icons = useLeafletIcons()
 
   return (
     <MapContainer
@@ -40,11 +41,11 @@ const PujaMap = ({ pandals, onEachFeature }: PujaMapProps) => {
       {pandals.map((pandal, idx) => {
         const { latitude, longitude } = pandal.location
         const { name, category } = pandal.details
-        const icons = (window as any).pujaIcons || {}
+        // const icons = (window as any).pujaIcons || {}
         const icon = icons[category] || icons['south']
 
         return (
-          <Marker key={idx} position={[latitude, longitude]} icon={icon}>
+          <Marker key={idx} position={[latitude, longitude]}>
             <Popup>
               <strong>{name}</strong>
               {/* <br /> */}
