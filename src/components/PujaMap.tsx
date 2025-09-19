@@ -45,7 +45,7 @@ const PujaMap = ({ pandals }: PujaMapProps) => {
         const icon = icons[category] || icons['south']
 
         return (
-          <Marker key={idx} position={[latitude, longitude]}>
+          <Marker key={idx} position={[latitude, longitude]} icon={icon}>
             <Popup>
               <strong>{name}</strong>
               {/* <br /> */}
