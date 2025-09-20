@@ -1,7 +1,6 @@
 'use client'
 
 import { Feature, Point } from 'geojson'
-import { Layer } from 'leaflet'
 import PujaMap from './PujaMap'
 import 'leaflet/dist/leaflet.css'
 import { pandals } from '@/data/puja_pandals_formatted'
@@ -19,20 +18,6 @@ const PandalMapContainer = () => {
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen)
   }
-
-  // const onEachFeature = (feature: Feature<Point>, layer: Layer) => {
-  //   if (feature.properties?.name) {
-  //     layer.bindPopup(`<strong>${feature.properties.name}</strong>`)
-      
-  //     // Add click handler to select pandal
-  //     layer.on({
-  //       click: () => {
-  //         const [lng, lat] = feature.geometry.coordinates
-  //         dispatch(selectPandal(feature))
-  //       },
-  //     })
-  //   }
-  // }
 
   const handlePandalSelect = (lat: number, lng: number, name: string) => {
     // This will be triggered when a pandal is selected from the list

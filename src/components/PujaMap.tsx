@@ -17,6 +17,8 @@ import { setViewport } from '@/features/map/mapSlice'
 import { PandalInfo } from '@/types/types'
 import { MapController } from './MapController'
 import { useLeafletIcons } from '@/hooks/useLeafletIcons'
+import { categoryMap } from '@/constants/constants'
+import GoogleMapLink from './GoogleMapLink'
 
 interface PujaMapProps {
   pandals: PandalInfo[]
@@ -49,8 +51,19 @@ const PujaMap = ({ pandals }: PujaMapProps) => {
         return (
           <Marker key={idx} position={[latitude, longitude]} icon={icon}>
             <Popup>
-              <strong>{name}</strong>
-              {/* <br /> */}
+              <div className='flex gap-2'>
+                <div>
+                  <GoogleMapLink lat={latitude} lng={longitude} />
+                </div>
+                <div>
+                  <div className='mb-1'>
+                    <strong>{name}</strong>
+                  </div>
+                  <div className='text-xs'>
+                    {categoryMap[category as keyof typeof categoryMap]}
+                  </div>
+                </div>
+              </div>
             </Popup>
           </Marker>
         )
