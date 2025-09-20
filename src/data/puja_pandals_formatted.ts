@@ -40,7 +40,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Park Tarun Sangha',
       description: 'Durga puja of Dum Dum Park Tarun Sangha',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -51,7 +51,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Park Bharat Chakra',
       description: 'Durga puja of Dum Dum Park Bharat Chakra',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -62,7 +62,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Tarun Dal',
       description: 'Durga puja of Dum Dum Tarun Dal',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -73,7 +73,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Park Yubak Brinda',
       description: 'Durga puja of Dum Dum Park Yubak Brinda',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -87,7 +87,7 @@ export const pandals = [
         '@type': 'html',
         value: 'Durga puja of Baghbazar Sarbojonin Durgotsab & Exhibition'
       },
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -153,7 +153,7 @@ export const pandals = [
     details: {
       name: 'Laketown Adhibasi Brinda',
       description: 'Durga puja of Laketown Adhibasi Brinda',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -164,7 +164,7 @@ export const pandals = [
     details: {
       name: 'Laketown Netaji Sporting Club',
       description: 'Durga puja of Laketown Netaji Sporting Club',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -307,7 +307,7 @@ export const pandals = [
     details: {
       name: 'Sreebhumi Sporting Club',
       description: 'Durga puja of Sreebhumi Sporting Club',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -318,7 +318,7 @@ export const pandals = [
     details: {
       name: 'Tala Barowari',
       description: 'Durga puja of Tala Barowari',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -351,7 +351,7 @@ export const pandals = [
     details: {
       name: 'Tala Palli',
       description: 'Durga puja of Tala Palli',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -439,7 +439,7 @@ export const pandals = [
     details: {
       name: 'Purbachal Sarbojanin',
       description: 'Durga puja of Purbachal Sarbojanin',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -450,7 +450,7 @@ export const pandals = [
     details: {
       name: 'Sovabazar Rajbari',
       description: 'Durga puja of Sovabazar Rajbari',
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -483,7 +483,7 @@ export const pandals = [
     details: {
       name: 'Laketown Nutan Palli Pradeep Sangha',
       description: 'Durga puja of Laketown Nutan Palli Pradeep Sangha',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -516,7 +516,7 @@ export const pandals = [
     details: {
       name: 'Dakshineswar Dolpere Adi Sabojonin Durgapuja',
       description: 'Durga puja of Dakshineswar Dolpere Adi Sabojonin Durgapuja',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -527,7 +527,7 @@ export const pandals = [
     details: {
       name: 'Milangarh Sarbojanin',
       description: 'Durga puja of Milangarh Sarbojanin',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -538,7 +538,7 @@ export const pandals = [
     details: {
       name: 'Motijheel Sarbojanin',
       description: 'Durga puja of Motijheel Sarbojanin',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -659,7 +659,7 @@ export const pandals = [
     details: {
       name: 'CIT Sarbojanin',
       description: 'Durga puja of CIT Sarbojanin',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -670,7 +670,7 @@ export const pandals = [
     details: {
       name: 'Baghbazar Jagodharti',
       description: 'Durga puja of Baghbazar Jagodharti',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -692,7 +692,7 @@ export const pandals = [
     details: {
       name: 'Belgachia Sadharan Durgatsab',
       description: 'Durga puja of Belgachia Sadharan Durgatsab',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -703,7 +703,7 @@ export const pandals = [
     details: {
       name: 'Kumartuli Sarbojanin',
       description: 'Durga puja of Kumartuli Sarbojanin',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -769,7 +769,7 @@ export const pandals = [
     details: {
       name: 'Karunamayee G Block',
       description: 'Durga puja of Karunamayee G Block',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -802,7 +802,7 @@ export const pandals = [
     details: {
       name: 'Naba Baghbazar',
       description: 'Durga puja of Naba Baghbazar',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -813,7 +813,7 @@ export const pandals = [
     details: {
       name: 'Bangur Avenue Protirodh Bahini',
       description: 'Durga puja of Bangur Avenue Protirodh Bahini',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -857,7 +857,7 @@ export const pandals = [
     details: {
       name: 'Baghbazar Pally',
       description: 'Durga puja of Baghbazar Pally',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -934,7 +934,7 @@ export const pandals = [
     details: {
       name: 'Laketown Vivekananda Park',
       description: 'Durga puja of Laketown Vivekananda Park',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -945,7 +945,7 @@ export const pandals = [
     details: {
       name: 'Jawpur Bayam Samiti',
       description: 'Durga puja of Jawpur Bayam Samiti',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -956,7 +956,7 @@ export const pandals = [
     details: {
       name: 'Pragati Pally Adhibasi Brindra',
       description: 'Durga puja of Pragati Pally Adhibasi Brindra',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -1011,7 +1011,7 @@ export const pandals = [
     details: {
       name: 'Sangrami',
       description: 'Durga puja of Sangrami',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -1099,7 +1099,7 @@ export const pandals = [
     details: {
       name: 'Maddox Square',
       description: 'Durga puja of Maddox Square',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1110,7 +1110,7 @@ export const pandals = [
     details: {
       name: 'Deshapriya Park',
       description: 'Durga puja of Deshapriya Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1121,7 +1121,7 @@ export const pandals = [
     details: {
       name: '41 Pally',
       description: 'Durga puja of 41 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1132,7 +1132,7 @@ export const pandals = [
     details: {
       name: 'Ajeya Sanghati',
       description: 'Durga puja of Ajeya Sanghati',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1143,7 +1143,7 @@ export const pandals = [
     details: {
       name: 'Vivekananda Sporting Club',
       description: 'Durga puja of Vivekananda Sporting Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1154,7 +1154,7 @@ export const pandals = [
     details: {
       name: 'Vivekananda Park Athletic Club',
       description: 'Durga puja of Vivekananda Park Athletic Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1165,7 +1165,7 @@ export const pandals = [
     details: {
       name: 'Pally Unnayan Samity Paschim Putiary',
       description: 'Durga puja of Pally Unnayan Samity Paschim Putiary',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1176,7 +1176,7 @@ export const pandals = [
     details: {
       name: 'Naskarpara Pally Unnayan Samity - Haridevpur',
       description: 'Durga puja of Naskarpara Pally Unnayan Samity - Haridevpur',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1187,7 +1187,7 @@ export const pandals = [
     details: {
       name: 'Barisha Club, Srishti Sahajatri',
       description: 'Durga puja of Barisha Club, Srishti Sahajatri',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1198,7 +1198,7 @@ export const pandals = [
     details: {
       name: 'Barisha Janakalyan Sangha',
       description: 'Durga puja of Barisha Janakalyan Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1209,7 +1209,7 @@ export const pandals = [
     details: {
       name: 'Sabeda Bagan',
       description: 'Durga puja of Sabeda Bagan',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1220,7 +1220,7 @@ export const pandals = [
     details: {
       name: 'Behala Club',
       description: 'Durga puja of Behala Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1231,7 +1231,7 @@ export const pandals = [
     details: {
       name: 'Debdaru Fatak',
       description: 'Durga puja of Debdaru Fatak',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1242,7 +1242,7 @@ export const pandals = [
     details: {
       name: 'Behala Sree Sangha',
       description: 'Durga puja of Behala Sree Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1256,7 +1256,7 @@ export const pandals = [
         '@type': 'html',
         value: "Durga puja of Behala Youngmen's Association"
       },
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1267,7 +1267,7 @@ export const pandals = [
     details: {
       name: 'Behala Adarsha Pally',
       description: 'Durga puja of Behala Adarsha Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1278,7 +1278,7 @@ export const pandals = [
     details: {
       name: 'Badamtala Ashar Sangha',
       description: 'Durga puja of Badamtala Ashar Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1289,7 +1289,7 @@ export const pandals = [
     details: {
       name: 'Behala Nutan Dal',
       description: 'Durga puja of Behala Nutan Dal',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1300,7 +1300,7 @@ export const pandals = [
     details: {
       name: 'Bosepukur Talbagan',
       description: 'Durga puja of Bosepukur Talbagan',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1311,7 +1311,7 @@ export const pandals = [
     details: {
       name: 'Rajdanga Tribarna Sangha',
       description: 'Durga puja of Rajdanga Tribarna Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1322,7 +1322,7 @@ export const pandals = [
     details: {
       name: 'Bosepukur Sitala Mandir',
       description: 'Durga puja of Bosepukur Sitala Mandir',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1333,7 +1333,7 @@ export const pandals = [
     details: {
       name: 'Singhi Park',
       description: 'Durga puja of Singhi Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1344,7 +1344,7 @@ export const pandals = [
     details: {
       name: 'Ekdalia Evergreen Club',
       description: 'Durga puja of Ekdalia Evergreen Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1355,7 +1355,7 @@ export const pandals = [
     details: {
       name: 'Jodhpur Park',
       description: 'Durga puja of Jodhpur Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1366,7 +1366,7 @@ export const pandals = [
     details: {
       name: 'Selimpur Pally',
       description: 'Durga puja of Selimpur Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1377,7 +1377,7 @@ export const pandals = [
     details: {
       name: 'Santoshpur Lake Pally',
       description: 'Durga puja of Santoshpur Lake Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1388,7 +1388,7 @@ export const pandals = [
     details: {
       name: 'Mudiali Club',
       description: 'Durga puja of Mudiali Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1399,7 +1399,7 @@ export const pandals = [
     details: {
       name: 'Shibmandir Sarbojanin Durgotsab',
       description: 'Durga puja of Shibmandir Sarbojanin Durgotsab',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1410,7 +1410,7 @@ export const pandals = [
     details: {
       name: 'Naktala Udayan Sangha',
       description: 'Durga puja of Naktala Udayan Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1421,7 +1421,7 @@ export const pandals = [
     details: {
       name: 'Rajdanga Naba Uday Sangha',
       description: 'Durga puja of Rajdanga Naba Uday Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1432,7 +1432,7 @@ export const pandals = [
     details: {
       name: 'Suruchi Sangha',
       description: 'Durga puja of Suruchi Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1443,7 +1443,7 @@ export const pandals = [
     details: {
       name: 'Tridhara Sammilani',
       description: 'Durga puja of Tridhara Sammilani',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1454,7 +1454,7 @@ export const pandals = [
     details: {
       name: 'Pratapaditya Road Tricone Park',
       description: 'Durga puja of Pratapaditya Road Tricone Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1465,7 +1465,7 @@ export const pandals = [
     details: {
       name: 'Sanghasree',
       description: 'Durga puja of Sanghasree',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1476,7 +1476,7 @@ export const pandals = [
     details: {
       name: '25 Pally',
       description: 'Durga puja of 25 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1487,7 +1487,7 @@ export const pandals = [
     details: {
       name: 'Mukul Sangha',
       description: 'Durga puja of Mukul Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1498,7 +1498,7 @@ export const pandals = [
     details: {
       name: '66 Palli',
       description: 'Durga puja of 66 Palli',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1509,7 +1509,7 @@ export const pandals = [
     details: {
       name: 'Hindustan Park',
       description: 'Durga puja of Hindustan Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1520,7 +1520,7 @@ export const pandals = [
     details: {
       name: 'Adi Lake Palli',
       description: 'Durga puja of Adi Lake Palli',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1531,7 +1531,7 @@ export const pandals = [
     details: {
       name: 'Azadgarh',
       description: 'Durga puja of Azadgarh',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1542,7 +1542,7 @@ export const pandals = [
     details: {
       name: 'Bharat Mata',
       description: 'Durga puja of Bharat Mata',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1553,7 +1553,7 @@ export const pandals = [
     details: {
       name: 'Golfgreen Phase 2',
       description: 'Durga puja of Golfgreen Phase 2',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1564,7 +1564,7 @@ export const pandals = [
     details: {
       name: 'Santoshpur Trikon Park',
       description: 'Durga puja of Santoshpur Trikon Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1575,7 +1575,7 @@ export const pandals = [
     details: {
       name: 'Yuba Sangha Club',
       description: 'Durga puja of Yuba Sangha Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1586,7 +1586,7 @@ export const pandals = [
     details: {
       name: 'Netaji Nagar Sarbojanin',
       description: 'Durga puja of Netaji Nagar Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1597,7 +1597,7 @@ export const pandals = [
     details: {
       name: 'Netaji Jatiya Sebadal',
       description: 'Durga puja of Netaji Jatiya Sebadal',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1611,7 +1611,7 @@ export const pandals = [
         '@type': 'html',
         value: "Durga puja of New Alipore Children's Park"
       },
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1622,7 +1622,7 @@ export const pandals = [
     details: {
       name: 'Pally Mangal Samity',
       description: 'Durga puja of Pally Mangal Samity',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1633,7 +1633,7 @@ export const pandals = [
     details: {
       name: 'Poddar Nagar Park',
       description: 'Durga puja of Poddar Nagar Park',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1644,7 +1644,7 @@ export const pandals = [
     details: {
       name: 'Chakraberia Sarbojanin',
       description: 'Durga puja of Chakraberia Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1655,7 +1655,7 @@ export const pandals = [
     details: {
       name: 'Babubagan Club',
       description: 'Durga puja of Babubagan Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1666,7 +1666,7 @@ export const pandals = [
     details: {
       name: 'Barisha Tarun Tirtha',
       description: 'Durga puja of Barisha Tarun Tirtha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1677,7 +1677,7 @@ export const pandals = [
     details: {
       name: '74 Pally',
       description: 'Durga puja of 74 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1710,7 +1710,7 @@ export const pandals = [
     details: {
       name: 'Behala 29 Palli',
       description: 'Durga puja of Behala 29 Palli',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1721,7 +1721,7 @@ export const pandals = [
     details: {
       name: 'Baishnabghata Patuli Upanagari',
       description: 'Durga puja of Baishnabghata Patuli Upanagari',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1732,7 +1732,7 @@ export const pandals = [
     details: {
       name: 'Kendua Shanti Sangha - Patuli',
       description: 'Durga puja of Kendua Shanti Sangha - Patuli',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1743,7 +1743,7 @@ export const pandals = [
     details: {
       name: 'Falguni Sangha',
       description: 'Durga puja of Falguni Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1754,7 +1754,7 @@ export const pandals = [
     details: {
       name: 'Chetla Agrani Club',
       description: 'Durga puja of Chetla Agrani Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1765,7 +1765,7 @@ export const pandals = [
     details: {
       name: 'Chelta Sarbasadharaner Club',
       description: 'Durga puja of Chelta Sarbasadharaner Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1776,7 +1776,7 @@ export const pandals = [
     details: {
       name: 'Selimpur Naskarpara',
       description: 'Durga puja of Selimpur Naskarpara',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1787,7 +1787,7 @@ export const pandals = [
     details: {
       name: 'Bengal United Club',
       description: 'Durga puja of Bengal United Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1798,7 +1798,7 @@ export const pandals = [
     details: {
       name: 'Chandranath Chatterjee Street',
       description: 'Durga puja of Chandranath Chatterjee Street',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1809,7 +1809,7 @@ export const pandals = [
     details: {
       name: 'Greenwood Nook',
       description: 'Durga puja of Greenwood Nook',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1820,7 +1820,7 @@ export const pandals = [
     details: {
       name: 'Sebak Sangha',
       description: 'Durga puja of Sebak Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1831,7 +1831,7 @@ export const pandals = [
     details: {
       name: 'Dilip Smriti Sangha',
       description: 'Durga puja of Dilip Smriti Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1842,7 +1842,7 @@ export const pandals = [
     details: {
       name: 'Lake Youth Corner',
       description: 'Durga puja of Lake Youth Corner',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1853,7 +1853,7 @@ export const pandals = [
     details: {
       name: 'Ekush Pally Sarbojanin Durgotsab',
       description: 'Durga puja of Ekush Pally Sarbojanin Durgotsab',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1864,7 +1864,7 @@ export const pandals = [
     details: {
       name: 'Acharya Prafulla Sangha - Behala',
       description: 'Durga puja of Acharya Prafulla Sangha - Behala',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1875,7 +1875,7 @@ export const pandals = [
     details: {
       name: 'Adi Ballygunge',
       description: 'Durga puja of Adi Ballygunge',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1886,7 +1886,7 @@ export const pandals = [
     details: {
       name: 'Ballygunge Cultural Association',
       description: 'Durga puja of Ballygunge Cultural Association',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1900,7 +1900,7 @@ export const pandals = [
         '@type': 'html',
         value: "Durga puja of Barisha Player's Corner"
       },
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1911,7 +1911,7 @@ export const pandals = [
     details: {
       name: 'Barisha Sabuj Sathi Club',
       description: 'Durga puja of Barisha Sabuj Sathi Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1922,7 +1922,7 @@ export const pandals = [
     details: {
       name: 'Barisha Tapoban',
       description: 'Durga puja of Barisha Tapoban',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1933,7 +1933,7 @@ export const pandals = [
     details: {
       name: 'Behala Arcadia Sarbojanin',
       description: 'Durga puja of Behala Arcadia Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1944,7 +1944,7 @@ export const pandals = [
     details: {
       name: 'Durgabari',
       description: 'Durga puja of Durgabari',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1955,7 +1955,7 @@ export const pandals = [
     details: {
       name: 'Ganbani Sangha',
       description: 'Durga puja of Ganbani Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1966,7 +1966,7 @@ export const pandals = [
     details: {
       name: 'Samaj Sebi Sangha',
       description: 'Durga puja of Samaj Sebi Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1977,7 +1977,7 @@ export const pandals = [
     details: {
       name: 'Sodepur Pragati Sangha (Haridevpur)',
       description: 'Durga puja of Sodepur Pragati Sangha (Haridevpur)',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1988,7 +1988,7 @@ export const pandals = [
     details: {
       name: 'Santoshpur Sonar Tori Durgatsav',
       description: 'Durga puja of Santoshpur Sonar Tori Durgatsav',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -1999,7 +1999,7 @@ export const pandals = [
     details: {
       name: 'Abasar Sarbojonin',
       description: 'Durga puja of Abasar Sarbojonin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2010,7 +2010,7 @@ export const pandals = [
     details: {
       name: 'Goal Math',
       description: 'Durga puja of Goal Math',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2021,7 +2021,7 @@ export const pandals = [
     details: {
       name: 'Barisha Netaji Sangha',
       description: 'Durga puja of Barisha Netaji Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2032,7 +2032,7 @@ export const pandals = [
     details: {
       name: 'Behala Buroshibtala Janakalyan Sangha',
       description: 'Durga puja of Behala Buroshibtala Janakalyan Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2043,7 +2043,7 @@ export const pandals = [
     details: {
       name: 'Jogajatri Club',
       description: 'Durga puja of Jogajatri Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2054,7 +2054,7 @@ export const pandals = [
     details: {
       name: 'Surya Nagar Sarbojanin',
       description: 'Durga puja of Surya Nagar Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2065,7 +2065,7 @@ export const pandals = [
     details: {
       name: 'Udayan Sangha',
       description: 'Durga puja of Udayan Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2076,7 +2076,7 @@ export const pandals = [
     details: {
       name: 'Uttar Panchanan Gram Milan',
       description: 'Durga puja of Uttar Panchanan Gram Milan',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2087,7 +2087,7 @@ export const pandals = [
     details: {
       name: 'Golden Arrow Club',
       description: 'Durga puja of Golden Arrow Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2098,7 +2098,7 @@ export const pandals = [
     details: {
       name: 'Purbachal Shakti Sangha',
       description: 'Durga puja of Purbachal Shakti Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2109,7 +2109,7 @@ export const pandals = [
     details: {
       name: 'Naskarpur Sarbojanin',
       description: 'Durga puja of Naskarpur Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2131,7 +2131,7 @@ export const pandals = [
     details: {
       name: '64 Pally',
       description: 'Durga puja of 64 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2142,7 +2142,7 @@ export const pandals = [
     details: {
       name: '95 Pally',
       description: 'Durga puja of 95 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2153,7 +2153,7 @@ export const pandals = [
     details: {
       name: 'Bandhab Sammilani',
       description: 'Durga puja of Bandhab Sammilani',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2164,7 +2164,7 @@ export const pandals = [
     details: {
       name: 'The Bengal Boys Training Association',
       description: 'Durga puja of The Bengal Boys Training Association',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2175,7 +2175,7 @@ export const pandals = [
     details: {
       name: 'Nepal Bhattacharjee Street',
       description: 'Durga puja of Nepal Bhattacharjee Street',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2186,7 +2186,7 @@ export const pandals = [
     details: {
       name: 'Roynagar Unnayan Samity',
       description: 'Durga puja of Roynagar Unnayan Samity',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2197,7 +2197,7 @@ export const pandals = [
     details: {
       name: 'Shyamapally Shyama Sangha',
       description: 'Durga puja of Shyamapally Shyama Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2208,7 +2208,7 @@ export const pandals = [
     details: {
       name: 'Garia Sreerampur Kalyan Samity',
       description: 'Durga puja of Garia Sreerampur Kalyan Samity',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2219,7 +2219,7 @@ export const pandals = [
     details: {
       name: 'Bhowanipur Swadhin Sangha',
       description: 'Durga puja of Bhowanipur Swadhin Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2230,7 +2230,7 @@ export const pandals = [
     details: {
       name: 'Dakshin Phalguni Club',
       description: 'Durga puja of Dakshin Phalguni Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2241,7 +2241,7 @@ export const pandals = [
     details: {
       name: 'Garia Pancha Durga',
       description: 'Durga puja of Garia Pancha Durga',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2252,7 +2252,7 @@ export const pandals = [
     details: {
       name: 'Garia Sabuj Dal',
       description: 'Durga puja of Garia Sabuj Dal',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2263,7 +2263,7 @@ export const pandals = [
     details: {
       name: 'Harish Park Puja',
       description: 'Durga puja of Harish Park Puja',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2274,7 +2274,7 @@ export const pandals = [
     details: {
       name: 'Jatra Suru Sangha',
       description: 'Durga puja of Jatra Suru Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2285,7 +2285,7 @@ export const pandals = [
     details: {
       name: 'Judge Bagan Recreation Club',
       description: 'Durga puja of Judge Bagan Recreation Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2296,7 +2296,7 @@ export const pandals = [
     details: {
       name: 'Green Avenue Sarbojanin',
       description: 'Durga puja of Green Avenue Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2307,7 +2307,7 @@ export const pandals = [
     details: {
       name: 'Rupchand Mukherjee Lane Sarbojanin',
       description: 'Durga puja of Rupchand Mukherjee Lane Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2318,7 +2318,7 @@ export const pandals = [
     details: {
       name: 'Santoshpur Agragami',
       description: 'Durga puja of Santoshpur Agragami',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2329,7 +2329,7 @@ export const pandals = [
     details: {
       name: 'Santoshpur Bibekananda Sangha',
       description: 'Durga puja of Santoshpur Bibekananda Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2340,7 +2340,7 @@ export const pandals = [
     details: {
       name: 'Lake Pally Sarbojanin',
       description: 'Durga puja of Lake Pally Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2351,7 +2351,7 @@ export const pandals = [
     details: {
       name: 'Golfgreen Phase 1',
       description: 'Durga puja of Golfgreen Phase 1',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2362,7 +2362,7 @@ export const pandals = [
     details: {
       name: '19 Pally',
       description: 'Durga puja of 19 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2373,7 +2373,7 @@ export const pandals = [
     details: {
       name: '68 Pally',
       description: 'Durga puja of 68 Pally',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2384,7 +2384,7 @@ export const pandals = [
     details: {
       name: '77 Palli',
       description: 'Durga puja of 77 Palli',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2395,7 +2395,7 @@ export const pandals = [
     details: {
       name: 'Abasarika Club',
       description: 'Durga puja of Abasarika Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2406,7 +2406,7 @@ export const pandals = [
     details: {
       name: 'Bakul Bagan Sarbojanin',
       description: 'Durga puja of Bakul Bagan Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2417,7 +2417,7 @@ export const pandals = [
     details: {
       name: 'Haridevpur Adarsha Samiti',
       description: 'Durga puja of Haridevpur Adarsha Samiti',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2428,7 +2428,7 @@ export const pandals = [
     details: {
       name: 'Hindustan Club',
       description: 'Durga puja of Hindustan Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2439,7 +2439,7 @@ export const pandals = [
     details: {
       name: 'Manoharpukur Youngs',
       description: 'Durga puja of Bakul Bagan Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2450,7 +2450,7 @@ export const pandals = [
     details: {
       name: 'Haridevpur Adarsha Samiti',
       description: 'Durga puja of Haridevpur Adarsha Samiti',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2461,7 +2461,7 @@ export const pandals = [
     details: {
       name: 'Hindustan Club',
       description: 'Durga puja of Hindustan Club',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2472,7 +2472,7 @@ export const pandals = [
     details: {
       name: 'Manoharpukur Youngs',
       description: 'Durga puja of Manoharpukur Youngs',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2483,7 +2483,7 @@ export const pandals = [
     details: {
       name: 'Padmapukur Youth Association',
       description: 'Durga puja of Padmapukur Youth Association',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2494,7 +2494,7 @@ export const pandals = [
     details: {
       name: 'Padmapukur Baroyari',
       description: 'Durga puja of Padmapukur Baroyari',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2516,7 +2516,7 @@ export const pandals = [
     details: {
       name: 'Triangular Park Sarbojanin',
       description: 'Durga puja of Triangular Park Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2527,7 +2527,7 @@ export const pandals = [
     details: {
       name: 'Sitalatala Kishore Sangha',
       description: 'Durga puja of Sitalatala Kishore Sangha',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2538,7 +2538,7 @@ export const pandals = [
     details: {
       name: 'Prasanta Disha Sarbojanin',
       description: 'Durga puja of Prasanta Disha Sarbojanin',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2549,7 +2549,7 @@ export const pandals = [
     details: {
       name: 'Barisha Yubak Brinda',
       description: 'Durga puja of Barisha Yubak Brinda',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2560,7 +2560,7 @@ export const pandals = [
     details: {
       name: 'Aikya Sammilani',
       description: 'Durga puja of Aikya Sammilani',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -2814,7 +2814,7 @@ export const pandals = [
     details: {
       name: 'Kumortuli Sarbojonin Durgotsab',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2825,7 +2825,7 @@ export const pandals = [
     details: {
       name: 'Baghbazar Sarbojonin Durgotsav',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2836,7 +2836,7 @@ export const pandals = [
     details: {
       name: 'Baghbazar 7 Pally Sarbojanin Durgotsav',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2847,7 +2847,7 @@ export const pandals = [
     details: {
       name: 'Deshbandhu Park',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2858,7 +2858,7 @@ export const pandals = [
     details: {
       name: 'Tala Barowari Durgotsab',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2869,7 +2869,7 @@ export const pandals = [
     details: {
       name: 'Tala Prattoy Durga Puja Art',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2880,7 +2880,7 @@ export const pandals = [
     details: {
       name: 'Sree Bhumi Sporting Club',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -2891,7 +2891,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Park Tarun Sangha',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2902,7 +2902,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Park Sarbojanin Durga Puja Samity',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2913,7 +2913,7 @@ export const pandals = [
     details: {
       name: 'Dum Dum Park Bharat Chakra',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2924,7 +2924,7 @@ export const pandals = [
     details: {
       name: 'Lake Town Adhibasi Brindo Durga Puja Pandal',
       description: '',
-      category: 'north'
+      category: 'south'
     }
   },
   {
@@ -2939,7 +2939,7 @@ export const pandals = [
         value:
           'This is a traditional "barir pujo" or puja organised by an individual household as against standard pujas conducted by local communities. This puja is conducted in North Calcutta by onbe of the biggest traditional families of the city - the Srimanis. A wonderful homely atmposphere prevails here where th main door of the house is open round the clock during the festival<br><br>Courtesy: The Pujo Company'
       },
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -2954,7 +2954,7 @@ export const pandals = [
         value:
           'Baboo Ramtanu Dutta , also popularly known as Tanu Baboo was amongst the foremost Baboos of colonial Calcutta . But the real story of this illustrious family begins a long long time back in the reign of Rajah Adisur of Bengal .<br>Adisur invited five learned Brahmins from Kanyakubja or Kanauj to come and settle in Bengal . Each of these Brahmins brought a non-Brahmin servitor along with them . Purushottam Dutta was one of the five servitors who came to Bengal with the legendary five Brahmins . And it was he who is credited to have founded Dutta family . He settled in the village of Bally on the banks of river Ganges . Later his descendents shifted to Andul . They were bestowed with the title ‘Chaudhury’ by the nawabs of Bengal . Finally the family split into three branches . While one branch ( of Ramsharan Dutta ) remained in Andul the other two ( Gobindasharan Dutta and Harisharan Dutta branches ) resettled themselves at GadhGobindaPur and Muragachha . Gobindasharan’s grandson Ramchandra Dutta came to settle at Chitpur in the new city of Calcutta . He was the ‘mutshuddi’ of the import export office of East India Company and also a native zamindar .<br>The family Durga puja is more than two centuries old and still continues without interruption . Presently there are three pujas held in homes of different shoriks or clans . Haatkhola Dutta once boasted of the most phenomenal and luxurious Durgotsavs in the city of Calcutta . No one but the Brahmin priests are entitled to touch the idol once she is seated on the platform for worship .The pratima is unique ‘Muttchowree’ styled . This means that the backdrop of the idol is in the shape of three temple spires , instead of the usual hemispherical type . The family still tries to maintain similarity in the pratimas of all three households . They are one of the few houses of the city which still preserve the original ‘khaas bangla’ mould of the face . Realeasing of neelkantha bird during Vijaya Dashami was an old tradition which had to stopped a couple of years back due to new rules .<br>The family also celebrates Kali puja . Tradition has it that the married ladies of the house do the farewell ‘boron’ during Durga puja and unmarried girls do it on Kali puja .Rathayatra festival of this family was also a spectacle to behold . Presently , trying conditions have forced them to retract the ritual to a modest scale . <br>Duttas were one of the very few families of old Calcutta which did not resort to appeasing British officials to create wealth and fame for themselves . There are no dancing halls in this house . There were no balls or parties and no nautches held during Durga puja to appease white shahibs . But even then , members from this family held extremely important positions of office in Colonial times and were widely respected throughout India . The family also produced countless advocates , doctors and men of repute . Netaji Subhas Chandra Bose was born to the girl ( His mother Prabhavati ) belonging to this family . Kedarnath Dutta , later known as Bhaktivindo thakur later became the founder of the new age gaudiya vaishnava movement . Rishi Aurobindo was also related with bloodlines of this family .<br><br>Courtesy: The Pujo Company'
       },
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -2969,7 +2969,7 @@ export const pandals = [
         value:
           'The beautiful Shobhabazar Rajbari Belongs to the royal family of Raja Naba Krishna Deb, the youngest son of Ram Charan Deb, who was a businessman and a Dewan under the Nawab of Cuttack. The Rajbari had seen glory and success during the British rule in Bengal. Nabakrishna Deb’s acquaintance with Lord Clive changed his fortune he started his career as a munshi and got engaged in the personal service of Lord Clive and gradually rose to power and fame with time. After Clive appointed him to the post of his personal Confidential Secretary, he became an influential negotiator between the British and the Mughals, Nawabs, and Rajas.<br><br>Raja Nabakrishna Deb first celebrated Durga Puja in the year 1757 to rejoice in the victory of the British over Nawab Siraj-ud-Daulah of Murshidabad. It is known from resources that renowned British generals Warren Hastings and Lord Clive were among the VIP invitees for the grand festival. Swami Vivekananda was also invited to a gala reception after his return from the World Parliament of Religions held in Chicago.<br><br>The Durga Puja in Rajbari is celebrated on the Nat Mandap or the Thakurdalan, which is an open courtyard area in the middle of the palatial building. Here the idol of the Devi along with her four children Lord Ganesha, Lord Kartik, Devi Lakshmi, and Devi Sarswati are presented in an “Ek Chala” or single structure platform. Starting from the bathing of Lord Ganesha’s consort “Kala Bou” (Banana Tree), Shosti Puja, Anjali puja of Mahastami, Navami Puja, and the immersion ceremony (Bishorjon) of the Devi idol on Bijaya Dashami – these grand five days are not only celebrated with a religious mind – the impact lies more like the celebration of happiness and joy. This historic and famous festival of the Rajbari is accompanied by some celebrities and all the five days of the celebration are open to the crowd to offer their devotion and pray to “Maa”.<br><br>Courtesy: The Pujo Company'
       },
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -2984,7 +2984,7 @@ export const pandals = [
         value:
           'It is known as first Durga Puja in Kolkata. The worship of goddess Durga keep under the yard with eight pillars and a roof top and with no walls. It is called Attchala Mondop. This Durga Puja is extremely popular for its rituals and tradition. Wood framed”Chalchitra” use to keep each year for same usage. This family having total eight Durga Puja in their families.<br><br>Lakshmikanta Ray Mazumdar was the famous zamindar in Bengal. He was associated with the powerful Mughal general Mansinha. They got Chowdhury title and their ‘gotro’ was Saborno. This Puja Known as Saborno Ray Choudhury Durgotsav. The family of Saborno Chowdhury hailed from Halisahar and later settled in Birati and eventually migrated to Barisha. Sabarna Roy Choudhury family was the landlord of the Kolkata village.On 10th Nov 1698 they transferred by lease, their rights over the 3 villages Sutanuti, Kalikata and Gobindapur to the East India Company with Rs.1300 only. Deal was conducted by Ram Chand Mazumdar, Manohar Majumdar with Charles Layer ,Son of law of Job Charnock.<br><br>Courtesy: The Pujo Company'
       },
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -2999,7 +2999,7 @@ export const pandals = [
         value:
           'This Puja is one among the wonderful Banedi barir Durga Puja in north Kolkata that being started by Sri Khelat Chandra Ghosh who was the Diwan of the court of Warren Hestings (British colonial administrator in India). Khelat Chandra Ghosh was famous for his social reforming activity. He was also concerned in cultural, musical and philanthropic activities in Kolkata that time. The trusty of Khelat Chandra Ghosh happens to celebrate Durga Puja at their thakur dalan that made from marbles and also the corridor is incredibly long and encircled by embellished wall. it’s a dancing hall too. the whole design take placed by Martin & Burn co. The worship of Devi Durga is confine a single decorated wood frame thatreferred to as Ek-chala and decorated by designed materials.<br><br>Courtesy: The Pujo Company'
       },
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -3029,7 +3029,7 @@ export const pandals = [
         value:
           'During the late 18th and early 19th centuries, Bengali merchant Ramdulal De(Sarkar) was a well-known figure in the maritime trade between India and America.<br><br>One of the earliest Bengali businessmen, Ramdulal Dey (Sarkar)amassed wealth in the 17th century through trade with the newly independent United States of America (USA). At a period when the US had just attained independence from Great Britain and was actively trying to develop its economy and trade, he was a pioneer in the Indo-American maritime trade. The second-oldest American consulate (and oldest in India) was established in Kolkata on November 19, 1792, by order of George Washington, the first President of the United States, due to the prosperous trading links between Ramdulal and Kolkata.<br><br>Due to their extravagant lifestyle, Asutosh Deb and Pramathanath Deb, his two sons, gained the renown nicknames “Chhatu Babu” and “Latu Babu.” They allegedly used to burn 100 rupee bills to light cigars. Despite their lack of commercial success, they were well-liked in their respective industries. Musician Asutosh alias Chhatu Babu was a prominent classical music lover and expert. His nach ghar (dancing room), where renowned national musicians and dancers like Gauhar Jaan and Pandit Ravi Shankar performed, became famous during his lifetime.<br><br>Ishwar Ram Dulal Deb (Sarkar) first held Durga Pujas at his home on Beadon Street in 1770. Later, this ritual came to be known as Chatu Babu Latu Babur Barir Traditional Durga Puja.<br>Courtesy: The Pujo Company'
       },
-      category: 'south'
+      category: 'aristocratic'
     }
   },
   {
@@ -3044,7 +3044,7 @@ export const pandals = [
         value:
           'The Durga Puja celebration of Baghbazar Haldar house is one of oldest and historically significant household Durga Puja of Kolkata. The idol is worshipped daily for the last 453 years. The Durga idol at Haldarbari is made of Kasthipathar (Touchstone) instead of clay. It is evident from the structure and style of the deity that it has been sculpted during the Pala era of Bengal. From this fact one can estimate that the age of the idol is around 600 to 700 years.<br><br>Courtesy: The Pujo Company'
       },
-      category: 'north'
+      category: 'aristocratic'
     }
   },
   {
@@ -3055,7 +3055,7 @@ export const pandals = [
     details: {
       name: 'Badamtala Ashar Sangha',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3066,7 +3066,7 @@ export const pandals = [
     details: {
       name: '66 Pally Durga Puja Pandal',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3077,7 +3077,7 @@ export const pandals = [
     details: {
       name: 'Nepal Bhattacharjee Street',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3088,7 +3088,7 @@ export const pandals = [
     details: {
       name: 'Chetla Agrani Club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3099,7 +3099,7 @@ export const pandals = [
     details: {
       name: 'Deshapriya Park',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3110,7 +3110,7 @@ export const pandals = [
     details: {
       name: 'Samaj Sebi Sangha',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3121,7 +3121,7 @@ export const pandals = [
     details: {
       name: 'Ballygunge Cultural Association',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3132,7 +3132,7 @@ export const pandals = [
     details: {
       name: 'Tridhara Sammilani',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3143,7 +3143,7 @@ export const pandals = [
     details: {
       name: 'Hindustan Park Sarbojanin Durga Puja',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3154,7 +3154,7 @@ export const pandals = [
     details: {
       name: 'Singhi Park Sarbojanin Durga Puja Committee',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3165,7 +3165,7 @@ export const pandals = [
     details: {
       name: 'Ekdalia Evergreen Club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3176,7 +3176,7 @@ export const pandals = [
     details: {
       name: 'Falguni Sangha',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3187,7 +3187,7 @@ export const pandals = [
     details: {
       name: 'Ballygunge 21 Pally',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3198,7 +3198,7 @@ export const pandals = [
     details: {
       name: 'Bosepukur Sitala Mandir',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3209,7 +3209,7 @@ export const pandals = [
     details: {
       name: 'Bosepukur Talbagan Sarbojanin Durga Puja Pandal',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3220,7 +3220,7 @@ export const pandals = [
     details: {
       name: 'Rajdanga Naba Uday Sangha',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3231,7 +3231,7 @@ export const pandals = [
     details: {
       name: 'Babubagan Club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3242,7 +3242,7 @@ export const pandals = [
     details: {
       name: 'Selimpur Pally Durga Puja Pandal',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3253,7 +3253,7 @@ export const pandals = [
     details: {
       name: 'Jodhpur Park',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3264,7 +3264,7 @@ export const pandals = [
     details: {
       name: '95 Pally Association',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3275,7 +3275,7 @@ export const pandals = [
     details: {
       name: 'Trikon Park Durgotsab ত্রিকোণ পার্ক দূর্গোৎসব',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3286,7 +3286,7 @@ export const pandals = [
     details: {
       name: 'Pally Mangal Samity',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3297,7 +3297,7 @@ export const pandals = [
     details: {
       name: 'SANTOSHPUR LAKE PALLY',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3308,7 +3308,7 @@ export const pandals = [
     details: {
       name: 'Mudiali Club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3319,7 +3319,7 @@ export const pandals = [
     details: {
       name: 'Suruchi Sangha',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3330,7 +3330,7 @@ export const pandals = [
     details: {
       name: 'Hindustan Club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3341,7 +3341,7 @@ export const pandals = [
     details: {
       name: 'Behala Club Sarbojanin Durgotsav Committee',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3352,7 +3352,7 @@ export const pandals = [
     details: {
       name: 'BARISHA SARBOJANIN DURGOTSAB',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3363,7 +3363,7 @@ export const pandals = [
     details: {
       name: 'Raipur Club : Durga Puja Organisers in Kolkata',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3374,7 +3374,7 @@ export const pandals = [
     details: {
       name: 'Naktala Udayan Sangha club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3389,7 +3389,7 @@ export const pandals = [
         value:
           "Nestled in the heart of Kolkata lies Maddox Square, a haven of traditions, camaraderie, and artistic excellence. For many, it's a place of festivity and divine blessings; for us at The Pujo Company, it's where our dream was born and our vision germinated.<br><br>Maddox Square Durga Pujo isn't just an event - it's an emotion, a tapestry of age-old traditions interwoven with contemporary touches. The square comes alive with the rhythmic beats of dhak, the scent of incense, and the sight of Maa Durga in all her radiant glory. Families, friends, and even strangers gather, not just to offer their prayers, but to be a part of a celebration that transcends religious boundaries.<br><br>It was in this vibrant atmosphere, amidst the blend of devotion and artistry, that the seeds of The Pujo Company were sown. As we marveled at the temporary Mandaps, rich in detail and craftsmanship, a thought struck us: What if we could preserve these masterpieces? What if we could ensure that they were created sustainably, without compromising the environment? And thus, with a mission to blend art with architecture, and a commitment to eco-friendliness, The Pujo Company was ideated.<br><br>Maddox Square holds a special place in our hearts. It's our home ground, the canvas where we first painted our dreams. It is where the fusion of heritage and innovation inspired us to look beyond the transient nature of the Mandaps and think of ways to make them everlasting.<br><br>Today, as we embark on our journey with The Pujo Company, Maddox Square remains our guiding star. It's a reminder of our roots, our inspiration, and our unwavering commitment to preserving the cultural legacy of Bengal. Every project we undertake, every Mandap we create, is imbued with the spirit and essence of Maddox Square Durga Pujo.<br><br>Join us in celebrating the place where it all began. Let's pay homage to Maddox Square, the birthplace of our dreams, our vision, and our passion."
       },
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3400,7 +3400,7 @@ export const pandals = [
     details: {
       name: '11 Pally Club',
       description: '',
-      category: 'south'
+      category: 'north'
     }
   },
   {
@@ -3411,7 +3411,7 @@ export const pandals = [
     details: {
       name: 'FD Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3422,7 +3422,7 @@ export const pandals = [
     details: {
       name: 'AK Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3433,7 +3433,7 @@ export const pandals = [
     details: {
       name: 'AE Block',
       description: '',
-      category: 'north'
+      category: 'salt_lake'
     }
   },
   {
@@ -3444,7 +3444,7 @@ export const pandals = [
     details: {
       name: 'AJ Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3455,7 +3455,7 @@ export const pandals = [
     details: {
       name: 'AA Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3466,7 +3466,7 @@ export const pandals = [
     details: {
       name: 'AB Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3477,7 +3477,7 @@ export const pandals = [
     details: {
       name: 'AC Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3488,7 +3488,7 @@ export const pandals = [
     details: {
       name: 'AD Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3499,7 +3499,7 @@ export const pandals = [
     details: {
       name: 'AG Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3510,7 +3510,7 @@ export const pandals = [
     details: {
       name: 'AH Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3521,7 +3521,7 @@ export const pandals = [
     details: {
       name: 'AL Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3532,7 +3532,7 @@ export const pandals = [
     details: {
       name: 'BA Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3543,7 +3543,7 @@ export const pandals = [
     details: {
       name: 'BB Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3554,7 +3554,7 @@ export const pandals = [
     details: {
       name: 'BC Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3565,7 +3565,7 @@ export const pandals = [
     details: {
       name: 'BD Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3576,7 +3576,7 @@ export const pandals = [
     details: {
       name: 'BE Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3587,7 +3587,7 @@ export const pandals = [
     details: {
       name: 'BG Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3598,7 +3598,7 @@ export const pandals = [
     details: {
       name: 'BH Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3609,7 +3609,7 @@ export const pandals = [
     details: {
       name: 'BJ Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3620,7 +3620,7 @@ export const pandals = [
     details: {
       name: 'BK Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3631,7 +3631,7 @@ export const pandals = [
     details: {
       name: 'BL Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3642,7 +3642,7 @@ export const pandals = [
     details: {
       name: 'CA Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3653,7 +3653,7 @@ export const pandals = [
     details: {
       name: 'CB Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3664,7 +3664,7 @@ export const pandals = [
     details: {
       name: 'CD Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3675,7 +3675,7 @@ export const pandals = [
     details: {
       name: 'CE Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3686,7 +3686,7 @@ export const pandals = [
     details: {
       name: 'LABONY ESTATE',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3697,7 +3697,7 @@ export const pandals = [
     details: {
       name: 'JC Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3708,7 +3708,7 @@ export const pandals = [
     details: {
       name: 'IB Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3719,7 +3719,7 @@ export const pandals = [
     details: {
       name: 'IA Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3730,7 +3730,7 @@ export const pandals = [
     details: {
       name: 'HB Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3741,7 +3741,7 @@ export const pandals = [
     details: {
       name: 'HA Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3752,7 +3752,7 @@ export const pandals = [
     details: {
       name: 'GD Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3763,7 +3763,7 @@ export const pandals = [
     details: {
       name: 'GC Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3774,7 +3774,7 @@ export const pandals = [
     details: {
       name: 'FE Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3785,7 +3785,7 @@ export const pandals = [
     details: {
       name: 'FC Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3796,7 +3796,7 @@ export const pandals = [
     details: {
       name: 'EE Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3807,7 +3807,7 @@ export const pandals = [
     details: {
       name: 'EC Market',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3818,7 +3818,7 @@ export const pandals = [
     details: {
       name: 'DL Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3829,7 +3829,7 @@ export const pandals = [
     details: {
       name: 'DB Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3840,7 +3840,7 @@ export const pandals = [
     details: {
       name: 'DA Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3851,7 +3851,7 @@ export const pandals = [
     details: {
       name: 'CJ Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   },
   {
@@ -3862,7 +3862,7 @@ export const pandals = [
     details: {
       name: 'CG Block',
       description: '',
-      category: 'south'
+      category: 'salt_lake'
     }
   }
 ]
