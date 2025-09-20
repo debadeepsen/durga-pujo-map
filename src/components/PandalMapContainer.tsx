@@ -10,9 +10,11 @@ import { Icon } from '@iconify-icon/react'
 import PujaList from './PujaList'
 import { useAppDispatch } from '@/hooks/hooks'
 import { selectPandal } from '@/features/map/mapSlice'
+import { useMediaQuery } from '@mui/material'
 
 const PandalMapContainer = () => {
-  const [drawerOpen, setDrawerOpen] = useState(true)
+  const isMobile = useMediaQuery('(max-width:600px)')
+  const [drawerOpen, setDrawerOpen] = useState(!isMobile)
   const dispatch = useAppDispatch()
 
   const toggleDrawer = () => {
@@ -21,21 +23,23 @@ const PandalMapContainer = () => {
 
   const handlePandalSelect = (lat: number, lng: number, name: string) => {
     // This will be triggered when a pandal is selected from the list
-    dispatch(selectPandal({
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [lng, lat],
-      },
-      properties: {
-        name,
-      },
-    } as Feature<Point>))
+    dispatch(
+      selectPandal({
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [lng, lat]
+        },
+        properties: {
+          name
+        }
+      } as Feature<Point>)
+    )
   }
 
   return (
     <div>
-      <button 
+      <button
         className='absolute top-1 left-2 z-50 p-2 rounded-md shadow-md hover:bg-gray-500/20 transition-colors'
         onClick={toggleDrawer}
         aria-label={drawerOpen ? 'Close menu' : 'Open menu'}
@@ -48,9 +52,7 @@ const PandalMapContainer = () => {
           <PujaList onSelect={handlePandalSelect} />
         </Drawer>
         <div className='relative z-1'>
-          <PujaMap
-            pandals={pandals}
-          />
+          <PujaMap pandals={pandals} />
         </div>
       </div>
     </div>
