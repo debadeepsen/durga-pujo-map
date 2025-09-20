@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Feature, Point } from 'geojson'
+import { PandalInfo } from '@/types/types'
 
 interface MapState {
   center: [number, number]
   zoom: number
-  selectedPandal: Feature<Point> | null
+  selectedPandal: PandalInfo | null
   viewport: {
     latitude: number
     longitude: number
@@ -32,14 +32,14 @@ const mapSlice = createSlice({
       state.center = [action.payload.latitude, action.payload.longitude]
       state.zoom = action.payload.zoom
     },
-    selectPandal: (state, action: PayloadAction<Feature<Point> | null>) => {
+    selectPandal: (state, action: PayloadAction<PandalInfo | null>) => {
       state.selectedPandal = action.payload
       if (action.payload) {
-        const [lng, lat] = action.payload.geometry.coordinates
+        const { latitude, longitude } = action.payload.location
         state.viewport = {
           ...state.viewport,
-          latitude: lat,
-          longitude: lng,
+          latitude,
+          longitude,
         }
       }
     },

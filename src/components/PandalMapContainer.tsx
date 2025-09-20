@@ -1,6 +1,6 @@
 'use client'
 
-import { Feature, Point } from 'geojson'
+import { PandalInfo } from '@/types/types'
 import PujaMap from './PujaMap'
 import 'leaflet/dist/leaflet.css'
 import { pandals } from '@/data/puja_pandals_formatted'
@@ -19,18 +19,12 @@ const PandalMapContainer = () => {
     setDrawerOpen(!drawerOpen)
   }
 
-  const handlePandalSelect = (lat: number, lng: number, name: string) => {
+  const handlePandalSelect = (lat: number, lng: number, name: string, category: string) => {
     // This will be triggered when a pandal is selected from the list
     dispatch(selectPandal({
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [lng, lat],
-      },
-      properties: {
-        name,
-      },
-    } as Feature<Point>))
+      location: { latitude: lat, longitude: lng },
+      details: { name, category, description: '' }
+    } as PandalInfo))
   }
 
   return (
@@ -45,7 +39,7 @@ const PandalMapContainer = () => {
       <div className='relative'>
         <Drawer open={drawerOpen} onClose={toggleDrawer} size='320px'>
           <h2 className='text-xl font-semibold -mt-2 mb-2'>Puja List</h2>
-          <PujaList onSelect={handlePandalSelect} />
+          <PujaList onSelect={handlePandalSelect} pandals={pandals} />
         </Drawer>
         <div className='relative z-1'>
           <PujaMap

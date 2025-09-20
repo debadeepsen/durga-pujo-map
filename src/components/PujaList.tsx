@@ -1,40 +1,50 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
   Typography,
-  List
+  List,
+  Box,
+  Paper
 } from '@mui/material'
 import { Icon } from '@iconify-icon/react'
 import { categoryMap } from '@/constants/constants'
-import { pandals } from '@/data/puja_pandals_formatted'
+import { PandalInfo } from '@/types/types'
 import GoogleMapLink from './GoogleMapLink'
+import DebouncedSearch from './DebouncedSearch'
 
-interface PandalFeature {
-  type: 'Feature'
-  geometry: {
-    type: 'Point'
-    coordinates: [number, number] // [lng, lat]
-  }
-  properties: {
-    name: string
-    description: string
-  }
-}
-
-type ClassifiedPujas = Record<string, PandalFeature[]>
+type ClassifiedPujas = Record<string, PandalInfo[]>
 
 type PujaListProps = {
-  onSelect?: (lat: number, lng: number, name: string) => void
+  onSelect?: (lat: number, lng: number, name: string, category: string) => void
+  pandals: PandalInfo[]
 }
 
-const PujaList = ({ onSelect }: PujaListProps) => {
+const PujaList = ({ onSelect, pandals }: PujaListProps) => {
   const [expanded, setExpanded] = useState<string | false>(false)
+  const [searchTerm, setSearchTerm] = useState('')
 
-  // Transform the data to match the expected format
+  // Filter function to search in name and description
+  const filterPandals = useCallback((pandals: PandalInfo[], term: string) => {
+    if (!term.trim()) return pandals
+    
+    const lowerTerm = term.toLowerCase()
+    return pandals.filter(p => {
+      const desc = typeof p.details.description === 'string' 
+        ? p.details.description 
+        : p.details.description?.value || ''
+      
+      return (
+        p.details.name.toLowerCase().includes(lowerTerm) ||
+        desc.toLowerCase().includes(lowerTerm)
+      )
+    })
+  }, [])
+
+  // Transform and filter the data
   const data = useMemo<ClassifiedPujas>(() => {
     const result: ClassifiedPujas = {}
     
@@ -43,29 +53,19 @@ const PujaList = ({ onSelect }: PujaListProps) => {
       result[category] = []
     })
     
+    // Filter pandals based on search term
+    const filteredPandals = filterPandals(pandals, searchTerm)
+    
     // Populate the categories with pandal data
-    pandals.forEach(pandal => {
-      const { latitude, longitude } = pandal.location
-      const { name, category, description } = pandal.details
-      
-      const feature: PandalFeature = {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [longitude, latitude] // Note: GeoJSON uses [lng, lat]
-        },
-        properties: {
-          name,
-          description: typeof description === 'string' ? description : description.value
-        }
-      }
+    filteredPandals.forEach(pandal => {
+      const { category } = pandal.details
       
       if (result[category]) {
-        result[category].push(feature)
+        result[category].push(pandal)
       } else {
-        // If category doesn't exist in categoryMap, add it to 'other' category
+        // If category doesn't exist in categoryMap, add it to 'south' category as fallback
         if (!result['south']) result['south'] = []
-        result['south'].push(feature)
+        result['south'].push(pandal)
       }
     })
     
@@ -80,22 +80,39 @@ const PujaList = ({ onSelect }: PujaListProps) => {
   }, [])
   
   // Set the first category as expanded by default
-  const firstKey = Object.keys(data)[0]
-  if (firstKey && expanded === false) {
-    setExpanded(firstKey)
-  }
+  // const firstKey = Object.keys(data)[0]
+  // if (firstKey && expanded === false) {
+  //   setExpanded(firstKey)
+  // }
 
   const handleChange =
     (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false)
     }
 
+  const handleSearch = (term: string) => {
+    setSearchTerm(term)
+  }
+
   if (Object.keys(data).length === 0) {
-    return <Typography>No puja pandals found.</Typography>
+    return (
+      <Paper elevation={0} className="p-4 text-center">
+        <Typography color="textSecondary">
+          {searchTerm ? 'No matching puja pandals found.' : 'No puja pandals available.'}
+        </Typography>
+      </Paper>
+    )
   }
 
   return (
-    <div>
+    <Box className="space-y-4">
+      <Paper elevation={0} className="p-4 sticky top-0 z-10 bg-white/80 backdrop-blur-sm">
+        <DebouncedSearch 
+          onSearch={handleSearch}
+          placeholder="Search puja pandals..."
+          className="max-w-md mx-auto"
+        />
+      </Paper>
       {Object.entries(data).map(([category, features]) => (
         <Accordion
           key={category}
@@ -110,27 +127,32 @@ const PujaList = ({ onSelect }: PujaListProps) => {
           </AccordionSummary>
           <AccordionDetails>
             <List>
-              {features.map((f, idx) => {
-                const [lng, lat] = f.geometry.coordinates
-                return (
-                  <div key={idx}>
-                    <button
-                      className='flex items-center gap-2 mb-2 w-full text-left'
-                      onClick={() => onSelect?.(lat, lng, f.properties.name)}
-                    >
-                      <GoogleMapLink lat={lat} lng={lng} />
-                      <span className='text-sm text-gray-500 text-left'>
-                        {f.properties.name}
-                      </span>
-                    </button>
-                  </div>
-                )
-              })}
+              {features.map((pandal, idx) => (
+                <div key={idx}>
+                  <button
+                    className='flex items-center gap-2 mb-2 w-full text-left'
+                    onClick={() => onSelect?.(
+                      pandal.location.latitude, 
+                      pandal.location.longitude, 
+                      pandal.details.name,
+                      pandal.details.category
+                    )}
+                  >
+                    <GoogleMapLink 
+                      lat={pandal.location.latitude} 
+                      lng={pandal.location.longitude} 
+                    />
+                    <span className='text-sm text-gray-500 text-left'>
+                      {pandal.details.name}
+                    </span>
+                  </button>
+                </div>
+              ))}
             </List>
           </AccordionDetails>
         </Accordion>
       ))}
-    </div>
+    </Box>
   )
 }
 
