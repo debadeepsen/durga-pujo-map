@@ -96,7 +96,7 @@ export const SearchBox = ({
     <div className={`w-full max-w-xl ${className}`}>
       <label className='relative block'>
         <span className='sr-only'>Search</span>
-        <div className='flex items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-sm px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400'>
+        <div className='flex items-center bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md shadow-sm px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400'>
 
           <Icon icon='ic:sharp-search' width={18} height={18} />
 

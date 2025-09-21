@@ -12,6 +12,7 @@ import { PandalInfo } from '@/types/types'
 import { MapController } from './MapController'
 import { useLeafletIcons } from '@/hooks/useLeafletIcons'
 import { PandalInfoPopup } from './PandalInfoPopup'
+import { attribution } from '@/constants/constants'
 
 interface PujaMapProps {
   pandals: PandalInfo[]
@@ -30,7 +31,7 @@ const PujaMap = ({ pandals }: PujaMapProps) => {
     >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-        attribution="&copy; <a target='_blank' href='https://www.openstreetmap.org/copyright'>OSM</a>"
+        attribution={attribution}
       />
       {pandals.map((pandal, idx) => {
         const { latitude, longitude } = pandal.location
