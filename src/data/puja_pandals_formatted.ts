@@ -1082,17 +1082,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.526407,
-      longitude: 88.35463
-    },
-    details: {
-      name: 'Maddox Square',
-      description: 'Durga puja of Maddox Square',
-      category: 'south'
-    }
-  },
-  {
-    location: {
       latitude: 22.518661,
       longitude: 88.353249
     },
@@ -1203,17 +1192,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.505381,
-      longitude: 88.314308
-    },
-    details: {
-      name: 'Behala Club',
-      description: 'Durga puja of Behala Club',
-      category: 'south'
-    }
-  },
-  {
-    location: {
       latitude: 22.502714,
       longitude: 88.317474
     },
@@ -1311,17 +1289,6 @@ export const pandals = [
     details: {
       name: 'Bosepukur Sitala Mandir',
       description: 'Durga puja of Bosepukur Sitala Mandir',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.521238,
-      longitude: 88.362991
-    },
-    details: {
-      name: 'Singhi Park',
-      description: 'Durga puja of Singhi Park',
       category: 'south'
     }
   },
@@ -3137,33 +3104,11 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5212187,
-      longitude: 88.3665629
-    },
-    details: {
-      name: 'Ekdalia Evergreen Club',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
       latitude: 22.5220333,
       longitude: 88.3656673
     },
     details: {
       name: 'Falguni Sangha',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.529175,
-      longitude: 88.3688163
-    },
-    details: {
-      name: 'Ballygunge 21 Pally',
       description: '',
       category: 'south'
     }
@@ -3263,17 +3208,6 @@ export const pandals = [
     },
     details: {
       name: 'Pally Mangal Samity',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.4914216,
-      longitude: 88.3826648
-    },
-    details: {
-      name: 'SANTOSHPUR LAKE PALLY',
       description: '',
       category: 'south'
     }

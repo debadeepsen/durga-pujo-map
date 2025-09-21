@@ -1,8 +1,9 @@
 import { setViewport } from "@/features/map/mapSlice"
 import { useAppDispatch, useAppSelector } from "@/hooks/storeHooks"
 import { popup } from "leaflet"
-import { useRef, useEffect } from "react"
-import { useMap } from "react-leaflet"
+import { useRef, useEffect, useCallback } from "react"
+import { useMap, useMapEvents } from "react-leaflet"
+import { debounce } from 'lodash'
 
 // Component to handle viewport changes and popups
 export const MapController = () => {
@@ -50,25 +51,26 @@ export const MapController = () => {
     }
   }, [viewport, map, selectedPandal])
 
-  // Update Redux state when map moves
-  const handleMove = () => {
-    const center = map.getCenter()
-    const zoom = map.getZoom()
-    dispatch(
-      setViewport({
-        latitude: center.lat,
-        longitude: center.lng,
-        zoom
-      })
-    )
-  }
+  // Debounced function to update viewport
+  const updateViewport = useCallback(
+    debounce((map: any) => {
+      const center = map.getCenter()
+      const zoom = map.getZoom()
+      dispatch(
+        setViewport({
+          latitude: center.lat,
+          longitude: center.lng,
+          zoom
+        })
+      )
+    }, 300),
+    [dispatch]
+  )
 
-  useEffect(() => {
-    map.on('move', handleMove)
-    return () => {
-      map.off('move', handleMove)
-    }
-  }, [map])
+  // Handle map events
+  useMapEvents({
+    moveend: () => updateViewport(map)
+  })
 
   return null
 }

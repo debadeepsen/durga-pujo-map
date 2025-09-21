@@ -1,19 +1,11 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  List
-} from '@mui/material'
-import { Icon } from '@iconify-icon/react'
+import { Accordion, Typography, List } from '@mui/material'
 import { categoryMap } from '@/constants/constants'
 import { pandals } from '@/data/puja_pandals_formatted'
 import GoogleMapLink from './GoogleMapLink'
 import { SearchBox } from './ui/SearchBox'
-import { useDarkMode } from '@/hooks/useDarkMode'
 import { Details, Summary } from './ui/accordion/components'
 
 interface PandalFeature {
@@ -35,8 +27,8 @@ type PujaListProps = {
 }
 
 const PujaList = ({ onSelect }: PujaListProps) => {
-  const [expanded, setExpanded] = useState<string | false>(false)
-  const isDark = useDarkMode()
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
 
   // Transform the data to match the expected format
   const data = useMemo<ClassifiedPujas>(() => {
@@ -84,16 +76,49 @@ const PujaList = ({ onSelect }: PujaListProps) => {
     return result
   }, [])
 
-  // Set the first category as expanded by default
-  const firstKey = Object.keys(data)[0]
-  if (firstKey && expanded === false) {
-    setExpanded(firstKey)
-  }
+  // Filter data based on search query
+  const filteredData = useMemo(() => {
+    if (!searchQuery.trim()) return data
+    
+    const query = searchQuery.toLowerCase()
+    const result: ClassifiedPujas = {}
+    const sectionsWithMatches = new Set<string>()
+    
+    Object.entries(data).forEach(([category, features]) => {
+      const matchingFeatures = features.filter(feature => 
+        feature.properties.name.toLowerCase().includes(query)
+      )
+      
+      if (matchingFeatures.length > 0) {
+        result[category] = matchingFeatures
+        sectionsWithMatches.add(category)
+      }
+    })
+    
+    // Update expanded sections based on search results
+    setExpandedSections(prev => {
+      const newSections = new Set(prev)
+      sectionsWithMatches.forEach(section => newSections.add(section))
+      return newSections
+    })
+    
+    return result
+  }, [data, searchQuery])
+  
+  // Use filtered data or all data if no search query
+  const displayData = searchQuery.trim() ? filteredData : data
 
-  const handleChange =
-    (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false)
-    }
+  const handleSectionToggle = (category: string) => {
+    setExpandedSections(prev => {
+      const newSections = new Set(prev)
+      if (newSections.has(category)) {
+        newSections.delete(category)
+      } else {
+        newSections.add(category)
+      }
+      return newSections
+    })
+  }
 
   if (Object.keys(data).length === 0) {
     return <Typography>No puja pandals found.</Typography>
@@ -101,12 +126,15 @@ const PujaList = ({ onSelect }: PujaListProps) => {
 
   return (
     <div>
-      {/* <SearchBox onSearch={() => {}} className='mb-2' /> */}
-      {Object.entries(data).map(([category, features]) => (
+      <SearchBox
+        onSearch={setSearchQuery}
+        className='mb-2'
+      />
+      {Object.entries(displayData).map(([category, features]) => (
         <Accordion
           key={category}
-          expanded={expanded === category}
-          onChange={handleChange(category)}
+          expanded={expandedSections.has(category)}
+          onChange={() => handleSectionToggle(category)}
           slotProps={{ transition: { unmountOnExit: true } }}
           disableGutters
         >
