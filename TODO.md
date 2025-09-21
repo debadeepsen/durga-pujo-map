@@ -8,3 +8,4 @@
 - Implement trip planning
 - Implement eight icons (4 for light mode and 4 for dark mode)
 - try to come up with a greenish gray color scheme to replace tailwind `slate`
+- ask ChatGPT if there is a trip planning option possible and feasible with algorithms like ACO
