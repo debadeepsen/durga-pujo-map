@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { Drawer } from './ui/Drawer'
 import { Icon } from '@iconify-icon/react'
 import PujaList from './PujaList'
-import { useAppDispatch } from '@/hooks/hooks'
+import { useAppDispatch } from '@/hooks/storeHooks'
 import { selectPandal } from '@/features/map/mapSlice'
 import { useMediaQuery } from '@mui/material'
 

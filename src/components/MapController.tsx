@@ -1,5 +1,5 @@
 import { setViewport } from "@/features/map/mapSlice"
-import { useAppDispatch, useAppSelector } from "@/hooks/hooks"
+import { useAppDispatch, useAppSelector } from "@/hooks/storeHooks"
 import { popup } from "leaflet"
 import { useRef, useEffect } from "react"
 import { useMap } from "react-leaflet"

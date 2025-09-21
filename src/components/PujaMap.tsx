@@ -12,7 +12,7 @@ import {
 import { Feature, Point } from 'geojson'
 import { Layer, popup } from 'leaflet'
 import { useEffect, useRef } from 'react'
-import { useAppSelector, useAppDispatch } from '@/hooks/hooks'
+import { useAppSelector, useAppDispatch } from '@/hooks/storeHooks'
 import { setViewport } from '@/features/map/mapSlice'
 import { PandalInfo } from '@/types/types'
 import { MapController } from './MapController'
