@@ -8,6 +8,7 @@
 :root {
   --background: #fff;
   --foreground: #333;
+  --dark-mode: invert(120%) hue-rotate(210deg) brightness(85%) contrast(90%);
 }
 
 @theme inline {
@@ -58,7 +59,7 @@ button:hover {
 .dark .leaflet-control-zoom-in,
 .dark .leaflet-control-zoom-out,
 .dark .leaflet-control-attribution {
-  filter: invert(120%) hue-rotate(230deg) brightness(85%) contrast(90%);
+  filter: var(--dark-mode);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,6 +67,6 @@ button:hover {
   .leaflet-control-zoom-in,
   .leaflet-control-zoom-out,
   .leaflet-control-attribution {
-    filter: invert(120%) hue-rotate(230deg) brightness(85%) contrast(90%);
+    filter: var(--dark-mode);
   }
 }

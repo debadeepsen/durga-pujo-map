@@ -23,7 +23,7 @@ export const Drawer = ({
     >
       <button
         onClick={onClose}
-        className='text-lg absolute top-3 right-4 w-3 h-3 flex justify-center items-center bg-gray-500/20 rounded-full'
+        className='text-lg absolute top-3 right-4 w-3 h-3 flex justify-center items-center bg-white dark:bg-gray-500/20 rounded-full'
       >
         &times;
       </button>
