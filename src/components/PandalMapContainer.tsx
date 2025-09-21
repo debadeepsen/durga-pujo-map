@@ -35,6 +35,7 @@ const PandalMapContainer = () => {
         }
       } as Feature<Point>)
     )
+    if (isMobile) setDrawerOpen(false)
   }
 
   return (
@@ -47,7 +48,11 @@ const PandalMapContainer = () => {
         <Icon icon='charm:menu-hamburger' width={24} height={24} />
       </button>
       <div className='relative'>
-        <Drawer open={drawerOpen} onClose={toggleDrawer} className='w-full sm:w-[320px]'>
+        <Drawer
+          open={drawerOpen}
+          onClose={toggleDrawer}
+          className='w-full sm:w-[320px]'
+        >
           <h2 className='text-xl font-semibold -mt-2 mb-2'>Puja List</h2>
           <PujaList onSelect={handlePandalSelect} />
         </Drawer>

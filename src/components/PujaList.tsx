@@ -154,7 +154,7 @@ const PujaList = ({ onSelect }: PujaListProps) => {
                       onClick={() => onSelect?.(lat, lng, f.properties.name)}
                     >
                       <GoogleMapLink lat={lat} lng={lng} />
-                      <span className='text-sm text-gray-500 text-left'>
+                      <span className='text-sm text-gray-500 dark:text-gray-300 text-left'>
                         {f.properties.name}
                       </span>
                     </button>
