@@ -101,7 +101,7 @@ const PujaList = ({ onSelect }: PujaListProps) => {
 
   return (
     <div>
-      <SearchBox onSearch={() => {}} className='mb-2' />
+      {/* <SearchBox onSearch={() => {}} className='mb-2' /> */}
       {Object.entries(data).map(([category, features]) => (
         <Accordion
           key={category}
