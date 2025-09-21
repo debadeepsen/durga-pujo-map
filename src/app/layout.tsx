@@ -42,7 +42,7 @@ export default function RootLayout({
       >
         <PageHeader />
         {children}
-        <PageFooter />
+        {/* <PageFooter /> */}
       </body>
       </ReduxProvider>
     </html>

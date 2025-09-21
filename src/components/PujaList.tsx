@@ -12,6 +12,9 @@ import { Icon } from '@iconify-icon/react'
 import { categoryMap } from '@/constants/constants'
 import { pandals } from '@/data/puja_pandals_formatted'
 import GoogleMapLink from './GoogleMapLink'
+import { SearchBox } from './ui/SearchBox'
+import { useDarkMode } from '@/hooks/useDarkMode'
+import { Details, Summary } from './ui/accordion/components'
 
 interface PandalFeature {
   type: 'Feature'
@@ -33,21 +36,22 @@ type PujaListProps = {
 
 const PujaList = ({ onSelect }: PujaListProps) => {
   const [expanded, setExpanded] = useState<string | false>(false)
+  const isDark = useDarkMode()
 
   // Transform the data to match the expected format
   const data = useMemo<ClassifiedPujas>(() => {
     const result: ClassifiedPujas = {}
-    
+
     // Initialize all categories from categoryMap
     Object.keys(categoryMap).forEach(category => {
       result[category] = []
     })
-    
+
     // Populate the categories with pandal data
     pandals.forEach(pandal => {
       const { latitude, longitude } = pandal.location
       const { name, category, description } = pandal.details
-      
+
       const feature: PandalFeature = {
         type: 'Feature',
         geometry: {
@@ -56,10 +60,11 @@ const PujaList = ({ onSelect }: PujaListProps) => {
         },
         properties: {
           name,
-          description: typeof description === 'string' ? description : description.value
+          description:
+            typeof description === 'string' ? description : description.value
         }
       }
-      
+
       if (result[category]) {
         result[category].push(feature)
       } else {
@@ -68,17 +73,17 @@ const PujaList = ({ onSelect }: PujaListProps) => {
         result['south'].push(feature)
       }
     })
-    
+
     // Remove empty categories
     Object.keys(result).forEach(key => {
       if (result[key].length === 0) {
         delete result[key]
       }
     })
-    
+
     return result
   }, [])
-  
+
   // Set the first category as expanded by default
   const firstKey = Object.keys(data)[0]
   if (firstKey && expanded === false) {
@@ -96,19 +101,21 @@ const PujaList = ({ onSelect }: PujaListProps) => {
 
   return (
     <div>
+      {/* <SearchBox onSearch={() => {}} className='mb-2' /> */}
       {Object.entries(data).map(([category, features]) => (
         <Accordion
           key={category}
           expanded={expanded === category}
           onChange={handleChange(category)}
           slotProps={{ transition: { unmountOnExit: true } }}
+          disableGutters
         >
-          <AccordionSummary expandIcon={<Icon icon='lucide:chevron-down' />}>
+          <Summary>
             <span className='text-base font-semibold'>
               {categoryMap[category as keyof typeof categoryMap] || category}
             </span>
-          </AccordionSummary>
-          <AccordionDetails>
+          </Summary>
+          <Details>
             <List>
               {features.map((f, idx) => {
                 const [lng, lat] = f.geometry.coordinates
@@ -127,7 +134,7 @@ const PujaList = ({ onSelect }: PujaListProps) => {
                 )
               })}
             </List>
-          </AccordionDetails>
+          </Details>
         </Accordion>
       ))}
     </div>

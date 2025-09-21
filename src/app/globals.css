@@ -8,6 +8,7 @@
 :root {
   --background: #fff;
   --foreground: #333;
+  --dark-mode: invert(120%) hue-rotate(210deg) brightness(85%) contrast(90%);
 }
 
 @theme inline {
@@ -50,5 +51,22 @@ button:hover {
 }
 
 .MuiCollapse-root {
-  margin-top: -1rem;
+  /* margin-top: 1rem; */
+}
+
+/* map dark mode */
+.dark .leaflet-layer,
+.dark .leaflet-control-zoom-in,
+.dark .leaflet-control-zoom-out,
+.dark .leaflet-control-attribution {
+  filter: var(--dark-mode);
+}
+
+@media (prefers-color-scheme: dark) {
+  .leaflet-layer,
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out,
+  .leaflet-control-attribution {
+    filter: var(--dark-mode);
+  }
 }
