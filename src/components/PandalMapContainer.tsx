@@ -45,7 +45,7 @@ const PandalMapContainer = () => {
         onClick={toggleDrawer}
         aria-label={drawerOpen ? 'Close menu' : 'Open menu'}
       >
-        <Icon icon='charm:menu-hamburger' width={24} height={24} />
+        <Icon icon='famicons:list-circle-outline' width={24} height={24} />
       </button>
       <div className='relative'>
         <Drawer
@@ -53,7 +53,7 @@ const PandalMapContainer = () => {
           onClose={toggleDrawer}
           className='w-full sm:w-[320px]'
         >
-          <h2 className='text-xl font-semibold -mt-2 mb-2'>Puja List</h2>
+          <h2 className='text-xl font-semibold -mt-0 mb-4'>Puja List</h2>
           <PujaList onSelect={handlePandalSelect} />
         </Drawer>
         <div className='relative z-1'>
