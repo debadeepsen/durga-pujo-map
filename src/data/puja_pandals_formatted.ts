@@ -261,7 +261,7 @@ export const pandals = [
       longitude: 88.406723
     },
     details: {
-      name: 'Salt Lake Laboni',
+      name: 'Salt Lake Laboni Estate',
       description: 'Durga puja of Salt Lake Laboni',
       category: 'salt_lake'
     }
@@ -274,17 +274,6 @@ export const pandals = [
     details: {
       name: 'Santosh Mitra Square',
       description: 'Durga puja of Santosh Mitra Square',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.570951,
-      longitude: 88.371902
-    },
-    details: {
-      name: 'Sealdah Railway Athletic Club',
-      description: 'Durga puja of Sealdah Railway Athletic Club',
       category: 'north'
     }
   },
@@ -318,17 +307,6 @@ export const pandals = [
     details: {
       name: 'Tala Barowari',
       description: 'Durga puja of Tala Barowari',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.58489,
-      longitude: 88.372093
-    },
-    details: {
-      name: 'Manicktala Chaltabagan Loha Patty',
-      description: 'Durga puja of Manicktala Chaltabagan Loha Patty',
       category: 'north'
     }
   },
@@ -444,17 +422,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.596798,
-      longitude: 88.367233
-    },
-    details: {
-      name: 'Sovabazar Rajbari',
-      description: 'Durga puja of Sovabazar Rajbari',
-      category: 'aristocratic'
-    }
-  },
-  {
-    location: {
       latitude: 22.574528,
       longitude: 88.368446
     },
@@ -560,17 +527,6 @@ export const pandals = [
     details: {
       name: 'Sandhani',
       description: 'Durga puja of Sandhani',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.585285,
-      longitude: 88.365097
-    },
-    details: {
-      name: 'Simla Byam Samity',
-      description: 'Durga puja of Simla Byam Samity',
       category: 'north'
     }
   },
@@ -2577,17 +2533,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5953601,
-      longitude: 88.3838115
-    },
-    details: {
-      name: 'Karbagan Sarbojanin Durgotsab Committee',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
       latitude: 22.5940824,
       longitude: 88.3835636
     },
@@ -2604,17 +2549,6 @@ export const pandals = [
     },
     details: {
       name: 'Nalin Sarkar Street',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5943863,
-      longitude: 88.3720004
-    },
-    details: {
-      name: 'Hatibagan Sarbojanin Durgotsav',
       description: '',
       category: 'north'
     }
@@ -2670,17 +2604,6 @@ export const pandals = [
     },
     details: {
       name: 'Simla Byayam Samity',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5994903,
-      longitude: 88.3660388
-    },
-    details: {
-      name: 'Jagat Mukherjee Park',
       description: '',
       category: 'north'
     }
@@ -2764,17 +2687,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.6046649,
-      longitude: 88.3659778
-    },
-    details: {
-      name: 'Baghbazar Sarbojonin Durgotsav',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
       latitude: 22.6046937,
       longitude: 88.3713085
     },
@@ -2791,17 +2703,6 @@ export const pandals = [
     },
     details: {
       name: 'Deshbandhu Park',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.6071191,
-      longitude: 88.3760867
-    },
-    details: {
-      name: 'Tala Barowari Durgotsab',
       description: '',
       category: 'north'
     }
@@ -2830,33 +2731,11 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.6109224,
-      longitude: 88.4137848
-    },
-    details: {
-      name: 'Dum Dum Park Tarun Sangha',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
       latitude: 22.6094363,
       longitude: 88.4164052
     },
     details: {
       name: 'Dum Dum Park Sarbojanin Durga Puja Samity',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
-      latitude: 22.61026,
-      longitude: 88.4143505
-    },
-    details: {
-      name: 'Dum Dum Park Bharat Chakra',
       description: '',
       category: 'north'
     }
@@ -2994,28 +2873,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5179743,
-      longitude: 88.3437184
-    },
-    details: {
-      name: 'Badamtala Ashar Sangha',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5181372,
-      longitude: 88.3427029
-    },
-    details: {
-      name: '66 Pally Durga Puja Pandal',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
       latitude: 22.5180222,
       longitude: 88.3426217
     },
@@ -3032,17 +2889,6 @@ export const pandals = [
     },
     details: {
       name: 'Chetla Agrani Club',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5185819,
-      longitude: 88.3534607
-    },
-    details: {
-      name: 'Deshapriya Park',
       description: '',
       category: 'south'
     }
@@ -3071,17 +2917,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5193983,
-      longitude: 88.3554347
-    },
-    details: {
-      name: 'Tridhara Sammilani',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
       latitude: 22.5179755,
       longitude: 88.3614231
     },
@@ -3098,17 +2933,6 @@ export const pandals = [
     },
     details: {
       name: 'Singhi Park Sarbojanin Durga Puja Committee',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5220333,
-      longitude: 88.3656673
-    },
-    details: {
-      name: 'Falguni Sangha',
       description: '',
       category: 'south'
     }
@@ -3192,44 +3016,11 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.493162,
-      longitude: 88.3784275
-    },
-    details: {
-      name: 'Trikon Park Durgotsab ত্রিকোণ পার্ক দূর্গোৎসব',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
       latitude: 22.5049158,
       longitude: 88.3744596
     },
     details: {
       name: 'Pally Mangal Samity',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.509985,
-      longitude: 88.346783
-    },
-    details: {
-      name: 'Mudiali Club',
-      description: '',
-      category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5090531,
-      longitude: 88.333942
-    },
-    details: {
-      name: 'Suruchi Sangha',
       description: '',
       category: 'south'
     }
@@ -3313,17 +3104,6 @@ export const pandals = [
       name: '11 Pally Club',
       description: '',
       category: 'south'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5830181,
-      longitude: 88.4131218
-    },
-    details: {
-      name: 'FD Block',
-      description: '',
-      category: 'salt_lake'
     }
   },
   {
@@ -3515,17 +3295,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5912327,
-      longitude: 88.4264406
-    },
-    details: {
-      name: 'BJ Block',
-      description: '',
-      category: 'salt_lake'
-    }
-  },
-  {
-    location: {
       latitude: 22.5876407,
       longitude: 88.4288779
     },
@@ -3586,17 +3355,6 @@ export const pandals = [
     },
     details: {
       name: 'CE Block',
-      description: '',
-      category: 'salt_lake'
-    }
-  },
-  {
-    location: {
-      latitude: 22.583099,
-      longitude: 88.4069754
-    },
-    details: {
-      name: 'LABONY ESTATE',
       description: '',
       category: 'salt_lake'
     }
@@ -3724,17 +3482,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5812837,
-      longitude: 88.4261513
-    },
-    details: {
-      name: 'DL Block',
-      description: '',
-      category: 'salt_lake'
-    }
-  },
-  {
-    location: {
       latitude: 22.5862889,
       longitude: 88.4049385
     },
@@ -3751,17 +3498,6 @@ export const pandals = [
     },
     details: {
       name: 'DA Block',
-      description: '',
-      category: 'salt_lake'
-    }
-  },
-  {
-    location: {
-      latitude: 22.5895296,
-      longitude: 88.4243333
-    },
-    details: {
-      name: 'CJ Block',
       description: '',
       category: 'salt_lake'
     }
