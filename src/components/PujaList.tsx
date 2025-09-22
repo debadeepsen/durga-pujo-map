@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react'
 import { Accordion, Typography, List } from '@mui/material'
 import { categoryMap } from '@/constants/constants'
-import { pandals } from '@/data/puja_pandals_formatted'
+import pandals from '@/data/puja_pandals.json'
 import GoogleMapLink from './GoogleMapLink'
 import { SearchBox } from './ui/SearchBox'
 import { Details, Summary } from './ui/accordion/components'

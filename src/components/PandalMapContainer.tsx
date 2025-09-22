@@ -3,7 +3,7 @@
 import { Feature, Point } from 'geojson'
 import PujaMap from './PujaMap'
 import 'leaflet/dist/leaflet.css'
-import { pandals } from '@/data/puja_pandals_formatted'
+import pandals from '@/data/puja_pandals.json'
 import { useState } from 'react'
 import { Drawer } from './ui/Drawer'
 import { Icon } from '@iconify-icon/react'
