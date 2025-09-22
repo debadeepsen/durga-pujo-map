@@ -13,11 +13,10 @@ export type Feature = {
   }
 }
 
+export type CategoryKey = keyof typeof import('../constants/constants').categoryMap
+
 export type ClassifiedPujas = {
-  'Aristocratic (Bonedi) Family Pujas': Feature[]
-  'North/Central Kolkata': Feature[]
-  'Salt Lake': Feature[]
-  'South Kolkata': Feature[]
+  [key in CategoryKey]: PandalInfo[]
 }
 
 export type PandalInfo = {

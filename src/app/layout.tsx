@@ -1,20 +1,8 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import 'leaflet/dist/leaflet.css'
-import { PageFooter } from '@/components/PageFooter'
 import { PageHeader } from '@/components/PageHeader'
 import ReduxProvider from '@/providers/ReduxProvider'
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-})
 
 export const metadata: Metadata = {
   title: 'Kolkata Durga Pujo Map',
@@ -37,12 +25,9 @@ export default function RootLayout({
           crossOrigin='anonymous'
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <PageHeader />
         {children}
-        {/* <PageFooter /> */}
       </body>
       </ReduxProvider>
     </html>
