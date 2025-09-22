@@ -21,6 +21,7 @@ export type ClassifiedPujas = {
 }
 
 export type PandalInfo = {
+  id: number
   location: {
     latitude: number
     longitude: number

@@ -33,13 +33,13 @@ const PujaMap = ({ pandals }: PujaMapProps) => {
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution={attribution}
       />
-      {pandals.map((pandal, idx) => {
+      {pandals.map(pandal => {
         const { latitude, longitude } = pandal.location
         const { category } = pandal.details
         const icon = icons[category] || icons['south']
 
         return (
-          <Marker key={idx} position={[latitude, longitude]} icon={icon}>
+          <Marker key={pandal.id} position={[latitude, longitude]} icon={icon}>
             <Popup>
               <PandalInfoPopup pandal={pandal} />
             </Popup>
