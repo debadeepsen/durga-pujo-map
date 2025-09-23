@@ -11,10 +11,11 @@ import { getCategorizedData } from '@/utils/utils'
 import { ClassifiedPujas, PandalInfo } from '@/types/types'
 
 type PujaListProps = {
-  onSelect?: (lat: number, lng: number, name: string) => void
+  onSelect?: (lat: number, lng: number, name: string, id: number) => void
+  selectedPandals?: number[]
 }
 
-const PujaList = ({ onSelect }: PujaListProps) => {
+const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedSections, setExpandedSections] = useState<string[]>([])
 
@@ -83,8 +84,8 @@ const PujaList = ({ onSelect }: PujaListProps) => {
                 return (
                   <div key={pandal.id}>
                     <button
-                      className='flex items-center gap-2 mb-2 w-full text-left'
-                      onClick={() => onSelect?.(latitude, longitude, name)}
+                      className={`flex items-center gap-2 mb-2 w-full text-left ${selectedPandals.includes(pandal.id) ? 'bg-blue-100' : ''}`}
+                      onClick={() => onSelect?.(latitude, longitude, name, pandal.id)}
                     >
                       <GoogleMapLink lat={latitude} lng={longitude} />
                       <span className='text-sm text-gray-500 dark:text-gray-300 text-left'>
