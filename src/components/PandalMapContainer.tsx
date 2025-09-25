@@ -123,14 +123,14 @@ const PandalMapContainer = () => {
             </div>
 
             {tripPlannerMode && (
-              <div className='mb-4 p-3 bg-gray-100 rounded-lg'>
+              <div className='mb-4 p-3 bg-gray-100 dark:bg-gray-800 border dark:border-gray-700 rounded-lg'>
                 <div className='mb-2'>
                   <input
                     type='text'
                     value={tripName}
                     onChange={(e) => setTripName(e.target.value)}
                     placeholder='Enter trip name'
-                    className='w-full p-2 border rounded'
+                    className='w-full p-2 bg-gray-100 dark:bg-gray-900 dark:border-gray-700 rounded'
                   />
                 </div>
                 <div className='flex justify-between items-center'>
@@ -155,7 +155,7 @@ const PandalMapContainer = () => {
                   {savedTrips
                     .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
                     .map(trip => (
-                      <div key={trip.id} className='flex justify-between items-center p-2 bg-gray-50 rounded'>
+                      <div key={trip.id} className='flex justify-between items-center p-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-700 rounded'>
                         <div>
                           <div className='font-medium'>{trip.name}</div>
                           <div className='text-xs text-gray-500'>
