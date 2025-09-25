@@ -3447,18 +3447,6 @@
     }
   },
   {
-    "id": 285,
-    "location": {
-      "latitude": 22.5978414,
-      "longitude": 88.4058478
-    },
-    "details": {
-      "name": "AD Block",
-      "description": "",
-      "category": "salt_lake"
-    }
-  },
-  {
     "id": 286,
     "location": {
       "latitude": 22.5995094,
