@@ -1,20 +1,27 @@
-'use client';
+'use client'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useState } from "react";
-import { Modal, Box, Typography, TextField, Button, IconButton } from "@mui/material";
-import CloseIcon from '@mui/icons-material/Close';
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React, { useState } from 'react'
+import {
+  Modal,
+  Box,
+  Typography,
+  TextField,
+  Button,
+  IconButton
+} from '@mui/material'
+import { Icon } from '@iconify-icon/react'
 
 export const PageHeader = () => {
-  const pathname = usePathname();
-  const isAboutPage = pathname === '/about';
-  const linkText = isAboutPage ? 'Home' : 'About';
-  const linkHref = isAboutPage ? '/' : '/about';
+  const pathname = usePathname()
+  const isAboutPage = pathname === '/about'
+  const linkText = isAboutPage ? 'Home' : 'About'
+  const linkHref = isAboutPage ? '/' : '/about'
 
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [open, setOpen] = useState(false)
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
   return (
     <div className='flex flex-1 items-center border-b border-zinc-600/50 z-10 relative'>
@@ -22,18 +29,18 @@ export const PageHeader = () => {
         Durga Puja Pandals Map
       </h1>
 
-      <nav className="pr-12 flex items-center gap-4">
+      <nav className='pr-12 flex items-center gap-4'>
         <Link
           href={linkHref}
-          className="text-sm font-medium text-blue-600 hover:text-blue-800"
+          className='text-sm font-medium text-blue-600 hover:text-blue-800'
         >
           {linkText}
         </Link>
 
         <Button
-          variant="contained"
-          color="primary"
-          size="small"
+          variant='contained'
+          color='primary'
+          size='small'
           onClick={handleOpen}
         >
           Contact
@@ -44,8 +51,8 @@ export const PageHeader = () => {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="contact-form-title"
-        aria-describedby="contact-form-description"
+        aria-labelledby='contact-form-title'
+        aria-describedby='contact-form-description'
       >
         <Box
           sx={{
@@ -65,46 +72,52 @@ export const PageHeader = () => {
             gap: 2
           }}
         >
-          <Box className="flex justify-between items-center mb-4">
-            <Typography id="contact-form-title" variant="h6" component="h2" sx={{ fontWeight: 600 }}>
+          <Box className='flex justify-between items-center mb-4'>
+            <Typography
+              id='contact-form-title'
+              variant='h6'
+              component='h2'
+              sx={{ fontWeight: 600 }}
+            >
               Contact Us
             </Typography>
             <IconButton onClick={handleClose}>
-              <CloseIcon />
+              <Icon icon='lets-icons:close-round-light' />
             </IconButton>
           </Box>
 
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-            We'd love to hear from you! Please fill out this form and we will get back to you shortly.
+          <Typography variant='body2' color='text.secondary' sx={{ mb: 2 }}>
+            We'd love to hear from you! Please fill out this form and we will
+            get back to you shortly.
           </Typography>
 
           <Box
-            component="form"
+            component='form'
             sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
-            onSubmit={(e) => {
-              e.preventDefault();
+            onSubmit={e => {
+              e.preventDefault()
               // TODO: handle form submission
-              handleClose();
+              handleClose()
             }}
           >
             <TextField
-              label="Name"
-              variant="outlined"
+              label='Name'
+              variant='outlined'
               fullWidth
               required
               sx={{ borderRadius: 2 }}
             />
             <TextField
-              label="Email"
-              type="email"
-              variant="outlined"
+              label='Email'
+              type='email'
+              variant='outlined'
               fullWidth
               required
               sx={{ borderRadius: 2 }}
             />
             <TextField
-              label="Message"
-              variant="outlined"
+              label='Message'
+              variant='outlined'
               fullWidth
               required
               multiline
@@ -112,9 +125,9 @@ export const PageHeader = () => {
               sx={{ borderRadius: 2 }}
             />
             <Button
-              type="submit"
-              variant="contained"
-              color="primary"
+              type='submit'
+              variant='contained'
+              color='primary'
               sx={{ mt: 1, py: 1.5, fontWeight: 600 }}
             >
               Send Message
@@ -123,5 +136,5 @@ export const PageHeader = () => {
         </Box>
       </Modal>
     </div>
-  );
-};
+  )
+}
