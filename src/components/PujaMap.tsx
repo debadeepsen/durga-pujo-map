@@ -5,7 +5,9 @@ import {
   TileLayer,
   ZoomControl,
   Marker,
-  Popup
+  Circle,
+  Popup,
+  Pane
 } from 'react-leaflet'
 import { useAppSelector } from '@/hooks/storeHooks'
 import { PandalInfo } from '@/types/types'
@@ -13,7 +15,7 @@ import { MapController } from './MapController'
 import { useLeafletIcons } from '@/hooks/useLeafletIcons'
 import { PandalInfoPopup } from './PandalInfoPopup'
 import { attribution } from '@/constants/constants'
-import L from 'leaflet';
+import L from 'leaflet'
 
 interface PujaMapProps {
   pandals: PandalInfo[]
@@ -44,16 +46,20 @@ const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
           <Marker
             key={pandal.id}
             position={[latitude, longitude]}
-            icon={selectedPandals.includes(pandal.id) ? L.divIcon({
-              html: `<div class="w-6 h-6 bg-blue-500 rounded-full border-2 border-white shadow-lg"></div>`,
-              className: '',
-              iconSize: [24, 24],
-              iconAnchor: [12, 12]
-            }) : icon}
+            icon={
+              selectedPandals.includes(pandal.id)
+                ? L.divIcon({
+                    html: `<div class="w-6 h-6 bg-blue-500 rounded-full border-2 border-white shadow-lg"></div>`,
+                    className: '',
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12]
+                  })
+                : icon
+            }
             eventHandlers={{
               click: () => {
                 // setSelectedPandal(pandal)
-              },
+              }
             }}
           >
             <Popup>
@@ -62,6 +68,21 @@ const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
           </Marker>
         )
       })}
+      <Pane name='custom' style={{ zIndex: 100 }}>
+        {selectedPandals.map(pandalId => {
+          const pandal = pandals.find(p => p.id === pandalId)
+          if (!pandal) return null
+          const { latitude, longitude } = pandal.location
+          return (
+            <Circle
+              key={pandalId}
+              center={[latitude, longitude]}
+              radius={200}
+              pathOptions={{ color: 'blue', pane: 'custom', opacity: 0.5 }}
+            />
+          )
+        })}
+      </Pane>
       <ZoomControl position='bottomright' />
       <MapController />
     </MapContainer>

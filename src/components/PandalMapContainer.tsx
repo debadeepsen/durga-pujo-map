@@ -42,6 +42,12 @@ const PandalMapContainer = () => {
     }
   }, [])
 
+  useEffect(() => {
+    if (tripPlannerMode) {
+      setSelectedPandals([])
+    }
+  }, [tripPlannerMode])
+
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen)
   }
@@ -203,7 +209,7 @@ const PandalMapContainer = () => {
           </div>
         </Drawer>
         <div className='relative z-1'>
-          <PujaMap pandals={pandals} />
+          <PujaMap pandals={pandals} selectedPandals={selectedPandals} />
         </div>
       </div>
     </div>
