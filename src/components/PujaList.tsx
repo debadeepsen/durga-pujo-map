@@ -16,6 +16,7 @@ type PujaListProps = {
 }
 
 const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
+  console.log({ selectedPandals })
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedSections, setExpandedSections] = useState<string[]>([])
 
@@ -45,7 +46,6 @@ const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
   const displayData = searchQuery.trim() ? filteredData : data
 
   const handleToggle = (isExpanded: boolean, category: string) => {
-    console.log({ isExpanded, category })
     setExpandedSections(prev => {
       const newSections = [...prev]
       if (!isExpanded) {

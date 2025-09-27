@@ -148,7 +148,7 @@ const PandalMapContainer = () => {
                   />
                 </div>
                 <div className='flex justify-between items-center'>
-                  <span className='text-sm text-gray-600'>
+                  <span className='text-sm text-gray-600 dark:text-gray-300'>
                     {selectedPandals.length} pandals selected
                   </span>
                   <button
@@ -198,7 +198,7 @@ const PandalMapContainer = () => {
 
             <PujaList
               onSelect={handlePandalSelect}
-              selectedPandals={tripPlannerMode ? selectedPandals : []}
+              selectedPandals={selectedPandals}
             />
           </div>
         </Drawer>
