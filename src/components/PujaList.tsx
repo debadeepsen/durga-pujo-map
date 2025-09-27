@@ -84,7 +84,7 @@ const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
                 return (
                   <div key={pandal.id}>
                     <button
-                      className={`flex items-center gap-2 mb-2 w-full text-left ${selectedPandals.includes(pandal.id) ? 'bg-blue-100' : ''}`}
+                      className={`flex items-center gap-2 rounded-sm mb-2 w-full text-left ${selectedPandals.includes(pandal.id) ? 'bg-blue-100 dark:bg-slate-600' : ''}`}
                       onClick={() => onSelect?.(latitude, longitude, name, pandal.id)}
                     >
                       <GoogleMapLink lat={latitude} lng={longitude} />

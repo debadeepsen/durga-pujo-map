@@ -18,12 +18,14 @@ const PandalMapContainer = () => {
   const [tripPlannerMode, setTripPlannerMode] = useState(false)
   const [selectedPandals, setSelectedPandals] = useState<number[]>([])
   const [tripName, setTripName] = useState('')
-  const [savedTrips, setSavedTrips] = useState<Array<{
-    id: string
-    name: string
-    pandalIds: number[]
-    createdAt: string
-  }>>([])
+  const [savedTrips, setSavedTrips] = useState<
+    Array<{
+      id: string
+      name: string
+      pandalIds: number[]
+      createdAt: string
+    }>
+  >([])
   const dispatch = useAppDispatch()
 
   // Load saved trips on mount
@@ -44,12 +46,15 @@ const PandalMapContainer = () => {
     setDrawerOpen(!drawerOpen)
   }
 
-  const handlePandalSelect = (lat: number, lng: number, name: string, id: number) => {
+  const handlePandalSelect = (
+    lat: number,
+    lng: number,
+    name: string,
+    id: number
+  ) => {
     if (tripPlannerMode) {
-      setSelectedPandals(prev => 
-        prev.includes(id) 
-          ? prev.filter(pId => pId !== id)
-          : [...prev, id]
+      setSelectedPandals(prev =>
+        prev.includes(id) ? prev.filter(pId => pId !== id) : [...prev, id]
       )
       return
     }
@@ -72,7 +77,7 @@ const PandalMapContainer = () => {
 
   const saveTrip = () => {
     if (!tripName.trim() || selectedPandals.length === 0) return
-    
+
     const tripId = `trip_${Date.now()}`
     const newTrip = {
       id: tripId,
@@ -80,7 +85,7 @@ const PandalMapContainer = () => {
       pandalIds: selectedPandals,
       createdAt: new Date().toISOString()
     }
-    
+
     const updatedTrips = [...savedTrips, newTrip]
     localStorage.setItem('savedTrips', JSON.stringify(updatedTrips))
     setSavedTrips(updatedTrips)
@@ -92,7 +97,7 @@ const PandalMapContainer = () => {
   const loadTrip = (tripId: string) => {
     const trip = savedTrips.find(t => t.id === tripId)
     if (!trip) return
-    
+
     setSelectedPandals(trip.pandalIds || [])
   }
 
@@ -111,12 +116,16 @@ const PandalMapContainer = () => {
           onClose={toggleDrawer}
           className='w-full sm:w-[350px]'
         >
-          <div className='p-4'>
+          <div className='p-4 pt-6'>
             <div className='flex justify-between items-center mb-4'>
               <h2 className='text-xl font-semibold'>Puja List</h2>
               <button
                 onClick={() => setTripPlannerMode(!tripPlannerMode)}
-                className={`px-3 py-1 rounded-md text-sm ${tripPlannerMode ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'}`}
+                className={`px-3 py-1 rounded-sm text-sm ${
+                  tripPlannerMode
+                    ? 'bg-red-500 dark:bg-red-700 text-white'
+                    : 'bg-blue-500 dark:bg-slate-600 text-white'
+                }`}
               >
                 {tripPlannerMode ? 'Cancel Trip' : 'Plan a Trip'}
               </button>
@@ -125,12 +134,17 @@ const PandalMapContainer = () => {
             {tripPlannerMode && (
               <div className='mb-4 p-3 bg-gray-100 dark:bg-gray-800 border dark:border-gray-700 rounded-lg'>
                 <div className='mb-2'>
+                  <span className='text-xs text-gray-600 dark:text-gray-300'>
+                    Pick pandals from the list below to plan a trip
+                  </span>
+                </div>
+                <div className='mb-2'>
                   <input
                     type='text'
                     value={tripName}
-                    onChange={(e) => setTripName(e.target.value)}
+                    onChange={e => setTripName(e.target.value)}
                     placeholder='Enter trip name'
-                    className='w-full p-2 bg-gray-100 dark:bg-gray-900 dark:border-gray-700 rounded'
+                    className='w-full p-2 bg-gray-100 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-md shadow-sm px-3 py-2 focus-within:ring-2 outline-none focus-within:ring-blue-400'
                   />
                 </div>
                 <div className='flex justify-between items-center'>
@@ -140,7 +154,7 @@ const PandalMapContainer = () => {
                   <button
                     onClick={saveTrip}
                     disabled={!tripName.trim() || selectedPandals.length === 0}
-                    className='px-3 py-1 bg-green-500 text-white rounded-md disabled:opacity-50'
+                    className='px-3 py-1 bg-green-500 dark:bg-green-700 text-white rounded-md disabled:opacity-50 text-sm'
                   >
                     Save Trip
                   </button>
@@ -153,18 +167,26 @@ const PandalMapContainer = () => {
                 <h3 className='font-medium mb-2'>Saved Trips</h3>
                 <div className='space-y-2'>
                   {savedTrips
-                    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+                    .sort(
+                      (a, b) =>
+                        new Date(b.createdAt).getTime() -
+                        new Date(a.createdAt).getTime()
+                    )
                     .map(trip => (
-                      <div key={trip.id} className='flex justify-between items-center p-2 bg-gray-100 dark:bg-gray-800 border dark:border-gray-700 rounded'>
+                      <div
+                        key={trip.id}
+                        className='flex justify-between items-center p-2 bg-gray-100 dark:bg-gray-800 border border-gray-500/30 dark:border-gray-700 rounded'
+                      >
                         <div>
                           <div className='font-medium'>{trip.name}</div>
                           <div className='text-xs text-gray-500'>
-                            {trip.pandalIds?.length || 0} pandals • {new Date(trip.createdAt).toLocaleDateString()}
+                            {trip.pandalIds?.length || 0} pandals •{' '}
+                            {new Date(trip.createdAt).toLocaleDateString()}
                           </div>
                         </div>
-                        <button 
+                        <button
                           onClick={() => loadTrip(trip.id)}
-                          className='px-2 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600'
+                          className='px-2 py-1 text-sm bg-blue-500 dark:bg-slate-600 text-white rounded-sm'
                         >
                           Load
                         </button>
@@ -174,8 +196,8 @@ const PandalMapContainer = () => {
               </div>
             )}
 
-            <PujaList 
-              onSelect={handlePandalSelect} 
+            <PujaList
+              onSelect={handlePandalSelect}
               selectedPandals={tripPlannerMode ? selectedPandals : []}
             />
           </div>
