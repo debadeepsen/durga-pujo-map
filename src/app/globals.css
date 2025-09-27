@@ -37,20 +37,13 @@ a {
   text-decoration: underline;
 }
 
-button {
+button:not(:disabled):hover {
   cursor: pointer;
-}
-
-button:hover {
   opacity: 0.8;
 }
 
 .leaflet-marker-icon {
   border: 0 !important;
-}
-
-.MuiCollapse-root {
-  /* margin-top: 1rem; */
 }
 
 /* map dark mode */

@@ -2577,17 +2577,6 @@ export const pandals = [
   },
   {
     location: {
-      latitude: 22.5908979,
-      longitude: 88.3689174
-    },
-    details: {
-      name: 'Kashi Bose Lane Durga Puja Samity',
-      description: '',
-      category: 'north'
-    }
-  },
-  {
-    location: {
       latitude: 22.5887151,
       longitude: 88.369288
     },

@@ -13,12 +13,14 @@ import { MapController } from './MapController'
 import { useLeafletIcons } from '@/hooks/useLeafletIcons'
 import { PandalInfoPopup } from './PandalInfoPopup'
 import { attribution } from '@/constants/constants'
+import L from 'leaflet';
 
 interface PujaMapProps {
   pandals: PandalInfo[]
+  selectedPandals?: number[]
 }
 
-const PujaMap = ({ pandals }: PujaMapProps) => {
+const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
   const { center, zoom } = useAppSelector(state => state.map)
   const icons = useLeafletIcons()
 
@@ -39,7 +41,21 @@ const PujaMap = ({ pandals }: PujaMapProps) => {
         const icon = icons[category] || icons['south']
 
         return (
-          <Marker key={pandal.id} position={[latitude, longitude]} icon={icon}>
+          <Marker
+            key={pandal.id}
+            position={[latitude, longitude]}
+            icon={selectedPandals.includes(pandal.id) ? L.divIcon({
+              html: `<div class="w-6 h-6 bg-blue-500 rounded-full border-2 border-white shadow-lg"></div>`,
+              className: '',
+              iconSize: [24, 24],
+              iconAnchor: [12, 12]
+            }) : icon}
+            eventHandlers={{
+              click: () => {
+                // setSelectedPandal(pandal)
+              },
+            }}
+          >
             <Popup>
               <PandalInfoPopup pandal={pandal} />
             </Popup>
