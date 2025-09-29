@@ -12,6 +12,7 @@ import {
   IconButton
 } from '@mui/material'
 import { Icon } from '@iconify-icon/react'
+import { ContactModal } from './ContactForm'
 
 export const PageHeader = () => {
   const pathname = usePathname()
@@ -48,93 +49,7 @@ export const PageHeader = () => {
       </nav>
 
       {/* Contact Modal */}
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby='contact-form-title'
-        aria-describedby='contact-form-description'
-      >
-        <Box
-          sx={{
-            position: 'absolute' as 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: { xs: '95vw', sm: 500 },
-            maxHeight: { xs: '95vh', sm: '90vh' },
-            bgcolor: 'background.paper',
-            borderRadius: 3,
-            boxShadow: 24,
-            p: { xs: 4, sm: 6 },
-            overflowY: 'auto',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2
-          }}
-        >
-          <Box className='flex justify-between items-center mb-4'>
-            <Typography
-              id='contact-form-title'
-              variant='h6'
-              component='h2'
-              sx={{ fontWeight: 600 }}
-            >
-              Contact Us
-            </Typography>
-            <IconButton onClick={handleClose}>
-              <Icon icon='lets-icons:close-round-light' />
-            </IconButton>
-          </Box>
-
-          <Typography variant='body2' color='text.secondary' sx={{ mb: 2 }}>
-            We'd love to hear from you! Please fill out this form and we will
-            get back to you shortly.
-          </Typography>
-
-          <Box
-            component='form'
-            sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
-            onSubmit={e => {
-              e.preventDefault()
-              // TODO: handle form submission
-              handleClose()
-            }}
-          >
-            <TextField
-              label='Name'
-              variant='outlined'
-              fullWidth
-              required
-              sx={{ borderRadius: 2 }}
-            />
-            <TextField
-              label='Email'
-              type='email'
-              variant='outlined'
-              fullWidth
-              required
-              sx={{ borderRadius: 2 }}
-            />
-            <TextField
-              label='Message'
-              variant='outlined'
-              fullWidth
-              required
-              multiline
-              rows={5}
-              sx={{ borderRadius: 2 }}
-            />
-            <Button
-              type='submit'
-              variant='contained'
-              color='primary'
-              sx={{ mt: 1, py: 1.5, fontWeight: 600 }}
-            >
-              Send Message
-            </Button>
-          </Box>
-        </Box>
-      </Modal>
+      <ContactModal open={open} onClose={handleClose} />
     </div>
   )
 }
