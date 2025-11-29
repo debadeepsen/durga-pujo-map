@@ -1,0 +1,244 @@
+[
+  {
+    "id": 1,
+    "location": {
+      "latitude": 22.5534,
+      "longitude": 88.3533
+    },
+    "details": {
+      "name": "Peter Cat",
+      "description": "Iconic bar & grill known for Chelo Kebabs and retro Park Street dining experience"
+    }
+  },
+  {
+    "id": 2,
+    "location": {
+      "latitude": 22.5529,
+      "longitude": 88.3536
+    },
+    "details": {
+      "name": "Mocambo Restaurant and Bar",
+      "description": "Historic continental restaurant preserving classic Park Street dining heritage"
+    }
+  },
+  {
+    "id": 3,
+    "location": {
+      "latitude": 22.5534,
+      "longitude": 88.3534
+    },
+    "details": {
+      "name": "One Step Up",
+      "description": "Popular mixed-cuisine spot serving continental and international dishes"
+    }
+  },
+  {
+    "id": 4,
+    "location": {
+      "latitude": 22.5523,
+      "longitude": 88.3546
+    },
+    "details": {
+      "name": "BAR-B-Q RESTAURANT",
+      "description": "Established Chinese-style restaurant known for Indo-Chinese favorites"
+    }
+  },
+  {
+    "id": 5,
+    "location": {
+      "latitude": 22.5527,
+      "longitude": 88.3542
+    },
+    "details": {
+      "name": "Oasis Restaurant and Bar",
+      "description": "Multi-cuisine restaurant with a mix of continental and Indian dishes"
+    }
+  },
+  {
+    "id": 6,
+    "location": {
+      "latitude": 22.5536,
+      "longitude": 88.3529
+    },
+    "details": {
+      "name": "Trincas Restaurant & Bar",
+      "description": "Heritage restaurant and bar, part of Park Street’s cultural dining legacy"
+    }
+  },
+  {
+    "id": 7,
+    "location": {
+      "latitude": 22.5532,
+      "longitude": 88.3532
+    },
+    "details": {
+      "name": "Burma Burma Restaurant & Tea Room",
+      "description": "Highly-rated Burmese vegetarian restaurant with unique flavours"
+    }
+  },
+  {
+    "id": 8,
+    "location": {
+      "latitude": 22.5538,
+      "longitude": 88.3525
+    },
+    "details": {
+      "name": "Zen, Kolkata",
+      "description": "Upscale Asian dining located within The Park hotel property"
+    }
+  },
+  {
+    "id": 9,
+    "location": {
+      "latitude": 22.5518,
+      "longitude": 88.3551
+    },
+    "details": {
+      "name": "Hard Rock Cafe",
+      "description": "American-style café and live music venue blending global dishes with entertainment"
+    }
+  },
+  {
+    "id": 10,
+    "location": {
+      "latitude": 22.5529,
+      "longitude": 88.3538
+    },
+    "details": {
+      "name": "Marco Polo",
+      "description": "Fine dining restaurant in the Park Street area with premium service"
+    }
+  },
+  {
+    "id": 11,
+    "location": {
+      "latitude": 22.5539,
+      "longitude": 88.3512
+    },
+    "details": {
+      "name": "The Gazeboo",
+      "description": "Mughlai restaurant featuring aromatic Indian dishes in central Kolkata"
+    }
+  },
+  {
+    "id": 12,
+    "location": {
+      "latitude": 22.5529,
+      "longitude": 88.3538
+    },
+    "details": {
+      "name": "PaPaYa Modern Asian Bistro",
+      "description": "Contemporary Asian bistro blending modern flavours and stylish presentation"
+    }
+  },
+  {
+    "id": 13,
+    "location": {
+      "latitude": 22.5538,
+      "longitude": 88.3525
+    },
+    "details": {
+      "name": "The Bridge",
+      "description": "Buffet restaurant offering multi-cuisine dining experiences"
+    }
+  },
+  {
+    "id": 14,
+    "location": {
+      "latitude": 22.5535,
+      "longitude": 88.3511
+    },
+    "details": {
+      "name": "Park Street SOCIAL",
+      "description": "Trendy restaurant and lounge mixing restaurant dining with nightlife vibes"
+    }
+  },
+  {
+    "id": 15,
+    "location": {
+      "latitude": 22.5535,
+      "longitude": 88.3531
+    },
+    "details": {
+      "name": "Flurys",
+      "description": "Legendary tearoom and confectionery known for English breakfasts and heritage ambiance"
+    }
+  },
+  {
+    "id": 16,
+    "location": {
+      "latitude": 22.5526,
+      "longitude": 88.3541
+    },
+    "details": {
+      "name": "Tung Fong",
+      "description": "Classic Chinese restaurant famous for its dim sums and old-school banquet vibes"
+    }
+  },
+  {
+    "id": 17,
+    "location": {
+      "latitude": 22.5538,
+      "longitude": 88.3525
+    },
+    "details": {
+      "name": "Someplace Else",
+      "description": "Iconic British-style pub inside The Park, famous for live rock music performances"
+    }
+  },
+  {
+    "id": 18,
+    "location": {
+      "latitude": 22.5530,
+      "longitude": 88.3535
+    },
+    "details": {
+      "name": "Ping's Cafe Orient",
+      "description": "Quirky spot serving healthy Asian street food and cocktails in a vibrant setting"
+    }
+  },
+  {
+    "id": 19,
+    "location": {
+      "latitude": 22.5529,
+      "longitude": 88.3538
+    },
+    "details": {
+      "name": "Mamagoto",
+      "description": "Fun and vibrant Pan-Asian restaurant known for its fusion bowls and decor"
+    }
+  },
+  {
+    "id": 20,
+    "location": {
+      "latitude": 22.5533,
+      "longitude": 88.3532
+    },
+    "details": {
+      "name": "The Lords and Barons",
+      "description": "Victorian-themed pub and lounge offering a colonial-era atmosphere and nightlife"
+    }
+  },
+  {
+    "id": 21,
+    "location": {
+      "latitude": 22.5529,
+      "longitude": 88.3538
+    },
+    "details": {
+      "name": "LMNO_Q",
+      "description": "Trendy skybar and lounge in Magma House known for its city views and open-air vibe"
+    }
+  },
+  {
+    "id": 22,
+    "location": {
+      "latitude": 22.5529,
+      "longitude": 88.3538
+    },
+    "details": {
+      "name": "M Bar Kitchen & Cocktails",
+      "description": "Chic nightlife destination offering contemporary European cuisine and crafted cocktails"
+    }
+  }
+]

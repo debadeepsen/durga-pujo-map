@@ -26,6 +26,7 @@ const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
   const { center, zoom } = useAppSelector(state => state.map)
   const icons = useLeafletIcons()
 
+
   return (
     <MapContainer
       center={center}
@@ -39,8 +40,9 @@ const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
       />
       {pandals.map(pandal => {
         const { latitude, longitude } = pandal.location
-        const { category } = pandal.details
-        const icon = icons[category] || icons['south']
+        const { category } = pandal.details ?? { category: 'none' }
+        const icon = icons[category ?? 'none'] || icons['south']
+        // console.log({ pandal, icon, latitude, longitude })
 
         return (
           <Marker

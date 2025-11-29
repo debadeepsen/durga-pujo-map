@@ -28,6 +28,6 @@ export type PandalInfo = {
   details: {
     name: string
     description: string | { '@type': string; value: string }
-    category: string
+    category?: string
   }
 }
