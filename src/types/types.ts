@@ -29,5 +29,14 @@ export type PandalInfo = {
     name: string
     description: string | { '@type': string; value: string }
     category: string
+    theme?: string
+    awards?: string[]
+    accessibility?: {
+      wheelchairAccessible: boolean
+      parkingAvailable: boolean
+      publicTransportNearby: boolean
+    }
+    crowdLevel?: 'low' | 'medium' | 'high'
+    entryFee?: number
   }
 }

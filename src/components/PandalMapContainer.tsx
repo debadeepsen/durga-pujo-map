@@ -8,9 +8,12 @@ import { useState, useEffect } from 'react'
 import { Drawer } from './ui/Drawer'
 import { Icon } from '@iconify-icon/react'
 import PujaList from './PujaList'
+import { RouteOptimizer } from './RouteOptimizer'
+import { WeatherWidget } from './WeatherWidget'
 import { useAppDispatch } from '@/hooks/storeHooks'
 import { selectPandal } from '@/features/map/mapSlice'
 import { useMediaQuery } from '@mui/material'
+import { OptimizedRoute } from '@/utils/routeOptimization'
 
 const PandalMapContainer = () => {
   const isMobile = useMediaQuery('(max-width: 640px)')
@@ -26,6 +29,7 @@ const PandalMapContainer = () => {
       createdAt: string
     }>
   >([])
+  const [optimizedRoute, setOptimizedRoute] = useState<OptimizedRoute | null>(null)
   const dispatch = useAppDispatch()
 
   // Load saved trips on mount
@@ -99,6 +103,11 @@ const PandalMapContainer = () => {
     if (!trip) return
 
     setSelectedPandals(trip.pandalIds || [])
+    setOptimizedRoute(null) // Reset route when loading a new trip
+  }
+
+  const handleRouteGenerated = (route: OptimizedRoute) => {
+    setOptimizedRoute(route)
   }
 
   return (
@@ -196,6 +205,24 @@ const PandalMapContainer = () => {
               </div>
             )}
 
+            {tripPlannerMode && selectedPandals.length > 1 && (
+              <RouteOptimizer
+                selectedPandals={pandals.filter(p => selectedPandals.includes(p.id))}
+                onRouteGenerated={handleRouteGenerated}
+              />
+            )}
+
+            {tripPlannerMode && selectedPandals.length > 0 && (
+              <WeatherWidget
+                location={{
+                  lat: pandals.find(p => p.id === selectedPandals[0])?.location.latitude || 22.5726,
+                  lon: pandals.find(p => p.id === selectedPandals[0])?.location.longitude || 88.3639,
+                  name: 'Kolkata'
+                }}
+                compact={true}
+              />
+            )}
+
             <PujaList
               onSelect={handlePandalSelect}
               selectedPandals={selectedPandals}
@@ -203,7 +230,7 @@ const PandalMapContainer = () => {
           </div>
         </Drawer>
         <div className='relative z-1'>
-          <PujaMap pandals={pandals} />
+          <PujaMap pandals={pandals} optimizedRoute={optimizedRoute} />
         </div>
       </div>
     </div>

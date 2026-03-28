@@ -8,6 +8,8 @@ import GoogleMapLink from './GoogleMapLink'
 import { SearchBox } from './ui/SearchBox'
 import { Details, Summary } from './ui/accordion/components'
 import { getCategorizedData } from '@/utils/utils'
+import { EnhancedFilters, FilterOptions } from './EnhancedFilters'
+import { applyEnhancedFilters } from '@/utils/filterUtils'
 import { ClassifiedPujas, PandalInfo } from '@/types/types'
 
 type PujaListProps = {
@@ -19,8 +21,23 @@ const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
   console.log({ selectedPandals })
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedSections, setExpandedSections] = useState<string[]>([])
+  const [enhancedFilters, setEnhancedFilters] = useState<FilterOptions>({
+    themes: [],
+    hasAwards: false,
+    wheelchairAccessible: false,
+    parkingAvailable: false,
+    crowdLevels: [],
+    maxEntryFee: 1000,
+    categories: []
+  })
 
   const data = useMemo(() => getCategorizedData(pandals), [pandals])
+  
+  // Apply enhanced filters first, then search
+  const filteredByEnhancedFilters = useMemo(() => {
+    return applyEnhancedFilters(pandals, enhancedFilters)
+  }, [pandals, enhancedFilters])
+
   const filteredData = useMemo(() => {
     const filtered: ClassifiedPujas = {
       aristocratic: [],
@@ -30,7 +47,7 @@ const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
     }
 
     const categoryMatch: string[] = []
-    pandals.forEach(pandal => {
+    filteredByEnhancedFilters.forEach(pandal => {
       const { name, category } = pandal.details
       if (name.toLowerCase().includes(searchQuery.toLowerCase())) {
         filtered[category as keyof ClassifiedPujas].push(pandal)
@@ -41,9 +58,11 @@ const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
     setExpandedSections([...new Set(categoryMatch)])
 
     return filtered
-  }, [pandals, searchQuery])
+  }, [filteredByEnhancedFilters, searchQuery])
 
-  const displayData = searchQuery.trim() ? filteredData : data
+  const displayData = searchQuery.trim() || Object.values(enhancedFilters).some(v => 
+  Array.isArray(v) ? v.length > 0 : v === true
+) ? filteredData : getCategorizedData(filteredByEnhancedFilters)
 
   const handleToggle = (isExpanded: boolean, category: string) => {
     setExpandedSections(prev => {
@@ -61,6 +80,13 @@ const PujaList = ({ onSelect, selectedPandals = [] }: PujaListProps) => {
   return (
     <div>
       <SearchBox onSearch={setSearchQuery} className='mb-2' />
+      <EnhancedFilters
+        pandals={pandals}
+        onFiltersChange={setEnhancedFilters}
+        activeFiltersCount={Object.values(enhancedFilters).filter((v, i) => 
+          Array.isArray(v) ? v.length > 0 : v === true && i !== 5 // Skip maxEntryFee default
+        ).length}
+      />
       {Object.entries(displayData).map(([category, pandalList]) => (
         <Accordion
           key={category}

@@ -5,10 +5,12 @@ import {
   TileLayer,
   ZoomControl,
   Marker,
-  Popup
+  Popup,
+  Polyline
 } from 'react-leaflet'
 import { useAppSelector } from '@/hooks/storeHooks'
 import { PandalInfo } from '@/types/types'
+import { OptimizedRoute } from '@/utils/routeOptimization'
 import { MapController } from './MapController'
 import { useLeafletIcons } from '@/hooks/useLeafletIcons'
 import { PandalInfoPopup } from './PandalInfoPopup'
@@ -18,11 +20,17 @@ import L from 'leaflet';
 interface PujaMapProps {
   pandals: PandalInfo[]
   selectedPandals?: number[]
+  optimizedRoute?: OptimizedRoute | null
 }
 
-const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
+const PujaMap = ({ pandals, selectedPandals = [], optimizedRoute }: PujaMapProps) => {
   const { center, zoom } = useAppSelector(state => state.map)
   const icons = useLeafletIcons()
+
+  // Create route polyline coordinates
+  const routePositions = optimizedRoute?.waypoints.map(waypoint => 
+    [waypoint.latitude, waypoint.longitude] as [number, number]
+  ) || []
 
   return (
     <MapContainer
@@ -62,6 +70,18 @@ const PujaMap = ({ pandals, selectedPandals = [] }: PujaMapProps) => {
           </Marker>
         )
       })}
+      
+      {/* Display optimized route polyline */}
+      {optimizedRoute && routePositions.length > 1 && (
+        <Polyline
+          positions={routePositions}
+          color="blue"
+          weight={4}
+          opacity={0.7}
+          dashArray="10, 10"
+        />
+      )}
+      
       <ZoomControl position='bottomright' />
       <MapController />
     </MapContainer>
